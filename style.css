@@ -1,1 +1,398 @@
+ <!-- Custom Style CSS -->
+    <style>
+        /* ==========================================================================
+           DEDYKOWANE STYLE (style.css) - REKSIE I AZORKI
+           ========================================================================== */
 
+        :root {
+            --color-primary: #86BDE6;     /* Błękitny */
+            --color-secondary: #EECF75;   /* Ciepły żółty/złoty */
+            --color-accent: #FFF8D9;      /* Kremowy jasny */
+            --color-text: #404364;        /* Ciemny granat/grafit */
+            --color-white: #ffffff;
+            --font-heading: 'Rubik Spray Paint', cursive;
+            --font-body: 'Lora', serif;
+        }
+
+        /* Podstawowe reguły i typografia */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: #fafbfc;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: var(--font-heading);
+            letter-spacing: 1px;
+            color: var(--color-text);
+        }
+
+        /* Przycisk Główny / Style CTA */
+        .btn-custom-primary {
+            background-color: var(--color-primary);
+            color: var(--color-text);
+            font-weight: 600;
+            border: 2px solid var(--color-primary);
+            border-radius: 50px;
+            padding: 12px 28px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(134, 189, 230, 0.3);
+        }
+
+        .btn-custom-primary:hover {
+            background-color: #72aedb;
+            border-color: #72aedb;
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(134, 189, 230, 0.4);
+        }
+
+        .btn-custom-secondary {
+            background-color: var(--color-secondary);
+            color: var(--color-text);
+            font-weight: 600;
+            border: 2px solid var(--color-secondary);
+            border-radius: 50px;
+            padding: 12px 28px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom-secondary:hover {
+            background-color: #e2c161;
+            border-color: #e2c161;
+            color: var(--color-text);
+            transform: translateY(-2px);
+        }
+
+        .btn-custom-accent {
+            background-color: var(--color-accent);
+            color: var(--color-text);
+            font-weight: 700;
+            border: 2px solid var(--color-secondary);
+            border-radius: 50px;
+            padding: 12px 28px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom-accent:hover {
+            background-color: var(--color-secondary);
+            color: var(--color-text);
+            transform: translateY(-2px);
+        }
+
+        /* Nawigacja (<header>, <nav>) */
+        .navbar-custom {
+            background-color: var(--color-white);
+            box-shadow: 0 4px 20px rgba(64, 67, 100, 0.08);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-brand {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--color-text) !important;
+        }
+
+        .navbar-brand i {
+            color: var(--color-primary);
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--color-text) !important;
+            margin: 0 8px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--color-primary) !important;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--color-secondary);
+            transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Sekcja Hero (<section id="hero">) */
+        #hero {
+            background: linear-gradient(135deg, var(--color-accent) 0%, rgba(134, 189, 230, 0.25) 100%);
+            padding: 100px 0 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-badge {
+            background-color: var(--color-secondary);
+            color: var(--color-text);
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 30px;
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: var(--color-text);
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+            color: #55587b;
+        }
+
+        .hero-img {
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(64, 67, 100, 0.15);
+            border: 8px solid var(--color-white);
+            object-fit: cover;
+            max-height: 480px;
+            width: 100%;
+        }
+
+        /* Sekcja O Nas (<section id="o-nas">) */
+        #o-nas {
+            padding: 90px 0;
+            background-color: var(--color-white);
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            color: var(--color-text);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 5px;
+            background-color: var(--color-secondary);
+            margin: 8px auto 0 auto;
+            border-radius: 3px;
+        }
+
+        /* Obrazek w sekcji O Nas */
+        .about-img {
+            border-radius: 28px;
+            box-shadow: 0 20px 40px rgba(64, 67, 100, 0.15);
+            border: 6px solid var(--color-accent);
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            min-height: 380px;
+            max-height: 480px;
+        }
+
+        .about-feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .about-feature-icon {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+
+        /* Sekcja Oferty / Karty (<section id="oferta">) */
+        #oferta {
+            padding: 90px 0;
+            background-color: #f4f8fb;
+        }
+
+        .card-custom {
+            border: none;
+            border-radius: 20px;
+            background-color: var(--color-white);
+            box-shadow: 0 10px 30px rgba(64, 67, 100, 0.06);
+            transition: all 0.3s ease;
+            height: 100%;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(64, 67, 100, 0.12);
+        }
+
+        .card-custom-img-wrapper {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-custom-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card-custom:hover .card-custom-img {
+            transform: scale(1.08);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--color-secondary);
+            color: var(--color-text);
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .card-body-custom {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .card-title-custom {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--color-text);
+        }
+
+        .card-text-custom {
+            font-family: var(--font-body);
+            color: #55587b;
+            font-size: 1.02rem;
+            line-height: 1.65;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Sekcja Kontakt (<section id="kontakt">) */
+        #kontakt {
+            padding: 90px 0;
+            background-color: var(--color-white);
+        }
+
+        .contact-info-card {
+            background-color: var(--color-accent);
+            border-radius: 20px;
+            padding: 40px;
+            height: 100%;
+            border: 2px solid var(--color-secondary);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .form-control, .form-select {
+            border-radius: 12px;
+            padding: 12px 18px;
+            border: 2px solid #e2e8f0;
+            font-family: var(--font-body);
+            color: var(--color-text);
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 0.25rem rgba(134, 189, 230, 0.25);
+        }
+
+        /* Stopka (<footer>) */
+        footer {
+            background-color: var(--color-text);
+            color: #d1d5db;
+            padding: 60px 0 30px 0;
+        }
+
+        footer h5 {
+            color: var(--color-secondary);
+            margin-bottom: 20px;
+        }
+
+        footer a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: var(--color-primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 991.98px) {
+            .hero-title {
+                font-size: 2.3rem;
+            }
+            #hero {
+                padding: 60px 0;
+                text-align: center;
+            }
+            .hero-btn-group {
+                justify-content: center;
+            }
+            .about-img-container {
+                margin-top: 30px;
+            }
+        }
+    </style>
