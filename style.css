@@ -1,11 +1,6 @@
-/* ==========================================================================
-   KSIĘGA STYLU: REKSIE I AZORKI
-   Zmienne kolorystyczne oraz typografia zgodna z briefem projektowym
-   ========================================================================== */
-
 :root {
-    --primary-color: #86BDE6;   /* Kolor wiodący - primary */
-    --secondary-color: #EECF75; /* Kolor pomocniczy - secondary */
+    --primary-color: #86BDE6;   /* Kolor wiodący */
+    --secondary-color: #EECF75; /* Kolor pomocniczy */
     --cta-color: #FFF8D9;       /* Kolor akcentu / CTA */
     --text-color: #404364;      /* Kolor tekstu podstawowego */
     
@@ -13,7 +8,6 @@
     --font-body: 'Lora', serif;
 }
 
-/* Ustawienia Ogólne */
 html {
     scroll-behavior: smooth;
 }
@@ -26,7 +20,7 @@ body {
     padding-top: 76px;
 }
 
-/* Typografia nagłówków */
+/* Nagłówki */
 h1, h2, h3, h4, h5, h6, 
 .font-heading, 
 .navbar-brand,
@@ -39,7 +33,7 @@ h1, h2, h3, h4, h5, h6,
     color: var(--text-color);
 }
 
-/* 1. Pasek Nawigacyjny (<header>, <nav>) */
+/* Navbar */
 .navbar {
     background-color: var(--primary-color) !important;
     transition: all 0.3s ease;
@@ -61,10 +55,11 @@ h1, h2, h3, h4, h5, h6,
     transform: translateY(-1px);
 }
 
-/* 2. Sekcja Wiodąca (<section id="hero">) */
+/* Hero Section - Zoptymalizowana wysokość dla monitorów komputerowych */
 #hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, #b8dbf4 100%);
-    min-height: calc(100vh - 76px);
+    min-height: 85vh;
+    padding: 60px 0;
 }
 
 .badge-tag {
@@ -79,7 +74,7 @@ h1, h2, h3, h4, h5, h6,
     opacity: 0.95;
 }
 
-/* Przyciski CTA */
+/* Przyciski */
 .btn-cta {
     background-color: var(--cta-color) !important;
     color: var(--text-color) !important;
@@ -110,7 +105,7 @@ h1, h2, h3, h4, h5, h6,
     transform: translateY(-3px);
 }
 
-/* 3. Tytuły Sekcji */
+/* Tytuły sekcji */
 .section-title {
     color: var(--text-color);
     position: relative;
@@ -127,7 +122,7 @@ h1, h2, h3, h4, h5, h6,
     border-radius: 2px;
 }
 
-/* 4. Sekcja Kluczowej Oferty (Karty) */
+/* Karty Oferty */
 .custom-card {
     border-radius: 1.25rem;
     transition: all 0.3s ease;
@@ -141,7 +136,7 @@ h1, h2, h3, h4, h5, h6,
 
 .card-img-top-wrapper {
     position: relative;
-    height: 220px;
+    height: 240px;
     overflow: hidden;
 }
 
@@ -156,7 +151,7 @@ h1, h2, h3, h4, h5, h6,
     transform: scale(1.06);
 }
 
-/* 5. Sekcja Kontaktowa z Formularzem */
+/* Sekcja Kontakt */
 .contact-icon-box {
     background-color: var(--cta-color);
     width: 52px;
@@ -186,7 +181,7 @@ h1, h2, h3, h4, h5, h6,
     color: var(--text-color);
 }
 
-/* 6. Stopka Serwisu (<footer>) */
+/* Stopka */
 footer {
     background-color: var(--text-color);
 }

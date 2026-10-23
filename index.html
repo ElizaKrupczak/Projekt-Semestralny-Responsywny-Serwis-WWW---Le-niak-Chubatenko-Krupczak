@@ -10,12 +10,12 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     
-    <!-- Google Fonts: Rubik Spray Paint (nagłówki) & Lora (tekst) -->
+    <!-- Google Fonts: Rubik Spray Paint & Lora -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
     
-    <!-- Zewnętrzny arkusz stylów CSS (zgodnie z wymogami za arkuszem Bootstrapa) -->
+    <!-- Zewnętrzny arkusz stylów CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -120,7 +120,7 @@
                         </div>
                     </div>
                     
-                    <!-- Prawa kolumna: Powiązana tematycznie grafika -->
+                    <!-- Prawa kolumna: Grafika -->
                     <div class="col-lg-6">
                         <div class="position-relative">
                             <img src="https://images.unsplash.com/photo-1534361960057-19889db9861e?auto=format&fit=crop&w=800&q=80" alt="Pies ze swoim właścicielem na spacerze" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="max-height: 480px;">
@@ -138,9 +138,8 @@
                     <p class="text-muted fs-5">Poznaj 3 główne filary naszej działalności stworzone z myślą o psach i ich opiekunach</p>
                 </div>
 
-                <!-- Zestawienie trzech kart informacyjnych (card) -->
                 <div class="row g-4">
-                    <!-- Karta 1: Blog i Wiedza -->
+                    <!-- Karta 1 -->
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 border-0 shadow-sm custom-card overflow-hidden">
                             <div class="card-img-top-wrapper">
@@ -159,7 +158,7 @@
                         </div>
                     </div>
 
-                    <!-- Karta 2: Sklep z Akcesoriami -->
+                    <!-- Karta 2 -->
                     <div class="col-lg-4 col-md-6">
                         <div class="card h-100 border-0 shadow-sm custom-card overflow-hidden">
                             <div class="card-img-top-wrapper">
@@ -178,7 +177,7 @@
                         </div>
                     </div>
 
-                    <!-- Karta 3: Poradnik Opieki -->
+                    <!-- Karta 3 -->
                     <div class="col-lg-4 col-md-6 mx-auto">
                         <div class="card h-100 border-0 shadow-sm custom-card overflow-hidden">
                             <div class="card-img-top-wrapper">
@@ -209,7 +208,6 @@
                 </div>
 
                 <div class="row g-4 g-lg-5">
-                    <!-- Wykaz danych teleadresowych -->
                     <div class="col-lg-5">
                         <div class="p-4 p-md-5 rounded-4 bg-light h-100 border border-light">
                             <h3 class="h3 mb-4 text-brand">Dane Kontaktowe</h3>
@@ -258,24 +256,20 @@
                         </div>
                     </div>
 
-                    <!-- Formularz zapytania ofertowego -->
                     <div class="col-lg-7">
                         <div class="p-4 p-md-5 rounded-4 border bg-white shadow-sm">
                             <form id="contactForm" onsubmit="event.preventDefault(); alert('Dziękujemy! Twoja wiadomość została wysłana.');">
                                 <div class="row g-3">
-                                    <!-- Pole imienia i nazwiska -->
                                     <div class="col-md-6">
                                         <label for="fullName" class="form-label font-heading fw-semibold">Imię i nazwisko <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control form-control-lg fs-6" id="fullName" placeholder="Jan Kowalski" required>
                                     </div>
 
-                                    <!-- Pole adresu e-mail -->
                                     <div class="col-md-6">
                                         <label for="email" class="form-label font-heading fw-semibold">Adres e-mail <span class="text-danger">*</span></label>
                                         <input type="email" class="form-control form-control-lg fs-6" id="email" placeholder="jan@example.com" required>
                                     </div>
 
-                                    <!-- Lista wyboru tematu wiadomości -->
                                     <div class="col-12">
                                         <label for="subject" class="form-label font-heading fw-semibold">Temat wiadomości <span class="text-danger">*</span></label>
                                         <select class="form-select form-select-lg fs-6" id="subject" required>
@@ -288,13 +282,11 @@
                                         </select>
                                     </div>
 
-                                    <!-- Pole wielowierszowe na treść zapytania -->
                                     <div class="col-12">
                                         <label for="message" class="form-label font-heading fw-semibold">Treść wiadomości <span class="text-danger">*</span></label>
                                         <textarea class="form-control fs-6" id="message" rows="5" placeholder="Napisz, w czym możemy Ci pomóc..." required></textarea>
                                     </div>
 
-                                    <!-- Przycisk wysłania formularza -->
                                     <div class="col-12 text-end pt-2">
                                         <button type="submit" class="btn btn-cta btn-lg px-5 py-3 shadow-sm font-heading fw-bold w-100 w-sm-auto">
                                             <i class="bi bi-send-fill me-2"></i> WYŚLIJ WIADOMOŚĆ
@@ -352,11 +344,9 @@
             
             <div class="row align-items-center small text-white-50">
                 <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
-                    <!-- Nota prawna z oznaczeniem praw autorskich i bieżącym rokiem 2026 -->
                     <p class="mb-0">&copy; 2026 Reksie i Azorki. Wszelkie prawa zastrzeżone.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <!-- Dane identyfikacyjne podmiotu -->
                     <span>Marka Komercyjna | Reksie i Azorki Sp. z o.o.</span>
                 </div>
             </div>
