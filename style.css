@@ -1,3 +1,4 @@
+/* Zmienne kolorystyczne zgodne z briefem */
 :root {
     --primary-color: #86BDE6;
     --secondary-color: #EECF75;
@@ -20,7 +21,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
     font-family: 'Rubik Spray Paint', cursive;
 }
 
-/* Navbar */
+/* 1. Pasek Nawigacyjny */
 .navbar {
     background-color: var(--primary-color) !important;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -41,7 +42,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
     opacity: 0.75;
 }
 
-/* Hero */
+/* 2. Sekcja Wiodąca (Hero) */
 #hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, #b3d7f2 100%);
     padding: 100px 0 80px;
@@ -72,7 +73,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-/* Cards */
+/* 4. Karty oferty */
 .card {
     border: none;
     border-radius: 15px;
@@ -90,7 +91,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
     color: var(--primary-color);
 }
 
-/* Section Headings */
+/* Nagłówki sekcji z linią ozdobną */
 .section-heading {
     position: relative;
     display: inline-block;
@@ -109,7 +110,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
     border-radius: 2px;
 }
 
-/* Contact & Form */
+/* 5. Sekcja kontaktowa i formularz */
 #kontakt {
     background-color: #f2f7fb;
 }
@@ -125,7 +126,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
     box-shadow: none;
 }
 
-/* Footer */
+/* 6. Stopka */
 footer {
     background-color: var(--text-color);
     color: #ffffff;
