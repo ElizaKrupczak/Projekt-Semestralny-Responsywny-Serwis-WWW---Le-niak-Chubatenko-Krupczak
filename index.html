@@ -1,359 +1,293 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reksie i Azorki – Blog o psach & Sklep z akcesoriami</title>
-    
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    
-    <!-- Google Fonts: Rubik Spray Paint & Lora -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
-    
-    <!-- Zewnętrzny arkusz stylów CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reksie i Azorki – blog o psach, porady i sklep z akcesoriami</title>
+  <meta name="description" content="Reksie i Azorki: przyjazny blog o rasach psów, ciekawostki, porady dla opiekunów oraz sklep z zabawkami i akcesoriami dla psów.">
+
+  <!-- Fonty -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Rubik+Spray+Paint&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 + ikony -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Własny arkusz stylów (po Bootstrapie) -->
+  <link href="style.css" rel="stylesheet">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="90" tabindex="0">
 
-    <!-- 1. PASEK NAWIGACYJNY (<header>, <nav>) -->
-    <header>
-        <nav class="navbar navbar-expand-lg fixed-top border-bottom border-light border-opacity-25 shadow-sm">
-            <div class="container">
-                <!-- Identyfikator marki -->
-                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                    <i class="bi bi-paw-fill fs-3"></i>
-                    <span>Reksie i Azorki</span>
-                </a>
-                
-                <!-- Navbar Toggler -->
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Przełącz nawigację">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                
-                <!-- Menu odnośników kotwiczących -->
-                <div class="collapse navbar-collapse" id="navbarMain">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-semibold">
-                        <li class="nav-item">
-                            <a class="nav-link px-3" href="#o-nas">O nas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3" href="#oferta">Oferta</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link px-3" href="#kontakt">Kontakt</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+  <a class="skip-link" href="#hero">Przejdź do treści</a>
 
-    <main>
-        <!-- 2. SEKCJA WIODĄCA (<section id="hero">) -->
-        <section id="hero" class="d-flex align-items-center position-relative overflow-hidden">
-            <div class="container position-relative z-1 py-5">
-                <div class="row align-items-center g-5">
-                    <div class="col-lg-7 text-center text-lg-start">
-                        <div class="badge-tag mb-3 d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill">
-                            <i class="bi bi-heart-fill text-danger"></i> Z miłości do piesków
-                        </div>
-                        <h1 class="display-3 fw-normal mb-4 text-brand">Reksie i Azorki – Wszystko dla Twojego Czworonoga!</h1>
-                        <p class="lead mb-4 fs-5 hero-subtitle">
-                            Odkryj świat pełen rzetelnej wiedzy o rasach psów, sprawdzonych porad pielęgnacyjnych oraz wyjątkowego sklepu z zabawkami i akcesoriami. Zadbaj o zdrowie, szczęście oraz bezpieczną zabawę swojego pupila każdego dnia!
-                        </p>
-                        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
-                            <a href="#kontakt" class="btn btn-cta btn-lg px-4 py-3 shadow-sm d-inline-flex align-items-center justify-content-center gap-2">
-                                <i class="bi bi-envelope-heart-fill"></i> Napisz do nas
-                            </a>
-                            <a href="#oferta" class="btn btn-outline-brand btn-lg px-4 py-3 d-inline-flex align-items-center justify-content-center gap-2">
-                                <i class="bi bi-bag-check-fill"></i> Zobacz ofertę
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 text-center">
-                        <div class="hero-image-wrapper position-relative d-inline-block">
-                            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=800&q=80" alt="Wesoły piesek Reksie i Azorki" class="img-fluid rounded-4 shadow-lg border border-4 border-white">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. SEKCJA O FIRMIE / INICJATYWIE (<section id="o-nas">) -->
-        <section id="o-nas" class="py-5">
-            <div class="container py-lg-4">
-                <div class="text-center mb-5">
-                    <h2 class="display-5 section-title mb-3">O Reksie i Azorki</h2>
-                    <p class="text-muted fs-5">Pasja, wiedza i troska o dobrostan każdego czworonoga</p>
-                </div>
-                
-                <div class="row align-items-center g-5">
-                    <!-- Lewa kolumna: Opis i misja -->
-                    <div class="col-lg-6">
-                        <div class="pe-lg-3">
-                            <h3 class="h2 mb-4 text-brand">Kim jesteśmy i co nas napędza?</h3>
-                            <p class="fs-5 mb-4">
-                                <strong>Reksie i Azorki</strong> to miejsce stworzone z autentycznej pasji do psów. Naszą misją jest wspieranie właścicieli czworonogów na każdym etapie wspólnej drogi – od szczeniaka po psiego seniora.
-                            </p>
-                            <p class="mb-4">
-                                Łączymy ekspercką wiedzę merytoryczną z wyselekcjonowanym asortymentem produktów. Wierzymy, że odpowiednie żywienie, mądra zabawa oraz prawidłowa opieka zdrowotna to klucz do długiego i szczęśliwego życia każdego psa.
-                            </p>
-                            <div class="row g-3 mt-2">
-                                <div class="col-sm-6">
-                                    <div class="p-3 bg-light rounded-3 border-start border-4 border-info">
-                                        <h4 class="h6 font-heading mb-1"><i class="bi bi-mortarboard-fill me-2 text-primary"></i>Sprawdzona Wiedza</h4>
-                                        <small class="text-muted">Tworzymy artykuły we współpracy z behawiorystami oraz weterynarzami.</small>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="p-3 bg-light rounded-3 border-start border-4 border-warning">
-                                        <h4 class="h6 font-heading mb-1"><i class="bi bi-shield-check me-2 text-warning"></i>Bezpieczne Akcesoria</h4>
-                                        <small class="text-muted">Atestowane zabawki i akcesoria, bezpieczne dla zdrowia Twojego pupila.</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Prawa kolumna: Grafika -->
-                    <div class="col-lg-6">
-                        <div class="position-relative">
-                            <img src="https://images.unsplash.com/photo-1534361960057-19889db9861e?auto=format&fit=crop&w=800&q=80" alt="Pies ze swoim właścicielem na spacerze" class="img-fluid rounded-4 shadow-lg w-100 object-fit-cover" style="max-height: 480px;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. SEKCJA KLUCZOWEJ OFERTY (<section id="oferta">) -->
-        <section id="oferta" class="py-5 bg-light-subtle">
-            <div class="container py-lg-4">
-                <div class="text-center mb-5">
-                    <h2 class="display-5 section-title mb-3">Czym się zajmujemy?</h2>
-                    <p class="text-muted fs-5">Poznaj 3 główne filary naszej działalności stworzone z myślą o psach i ich opiekunach</p>
-                </div>
-
-                <div class="row g-4">
-                    <!-- Karta 1 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 border-0 shadow-sm custom-card overflow-hidden">
-                            <div class="card-img-top-wrapper">
-                                <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Rasy psów i porady">
-                                <span class="badge bg-primary position-absolute top-0 end-0 m-3 px-3 py-2">Blog & Edukacja</span>
-                            </div>
-                            <div class="card-body p-4 d-flex flex-column">
-                                <h3 class="card-title h4 mb-3 text-brand">Porady i Wiedza o Rasach</h3>
-                                <p class="card-text text-muted flex-grow-1">
-                                    Obszerny blog o rasach psów, poradnik wychowania, żywienia oraz wartościowe porady zdrowotne przygotowane przez czołowych ekspertów.
-                                </p>
-                                <div class="pt-3 border-top mt-3">
-                                    <a href="#kontakt" class="btn btn-link text-decoration-none p-0 font-heading fw-bold text-brand">Czytaj Bloga <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Karta 2 -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card h-100 border-0 shadow-sm custom-card overflow-hidden">
-                            <div class="card-img-top-wrapper">
-                                <img src="https://images.unsplash.com/photo-1535294435445-d7249524ef2e?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Zabawki i akcesoria dla psów">
-                                <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3 px-3 py-2">Bestseller</span>
-                            </div>
-                            <div class="card-body p-4 d-flex flex-column">
-                                <h3 class="card-title h4 mb-3 text-brand">Sklep z Zabawkami i Akcesoriami</h3>
-                                <p class="card-text text-muted flex-grow-1">
-                                    Ergonomiczne szelki, wytrzymałe smycze, wygodne legowiska oraz eleganckie akcesoria spacerowe najwyższej jakości dla Twojego pupila.
-                                </p>
-                                <div class="pt-3 border-top mt-3">
-                                    <a href="#kontakt" class="btn btn-link text-decoration-none p-0 font-heading fw-bold text-brand">Zobacz Akcesoria <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Karta 3 -->
-                    <div class="col-lg-4 col-md-6 mx-auto">
-                        <div class="card h-100 border-0 shadow-sm custom-card overflow-hidden">
-                            <div class="card-img-top-wrapper">
-                                <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Opieka nad psem">
-                                <span class="badge bg-info text-dark position-absolute top-0 end-0 m-3 px-3 py-2">Zabawa</span>
-                            </div>
-                            <div class="card-body p-4 d-flex flex-column">
-                                <h3 class="card-title h4 mb-3 text-brand">Poradnik Opieki i Ciekawostki</h3>
-                                <p class="card-text text-muted flex-grow-1">
-                                    Gry logiczne, wytrzymałe gryzaki, piłki oraz ekscytujące zabawki węchowe stymulujące rozwój fizyczny i umysłowy psa.
-                                </p>
-                                <div class="pt-3 border-top mt-3">
-                                    <a href="#kontakt" class="btn btn-link text-decoration-none p-0 font-heading fw-bold text-brand">Odkryj Zabawki <i class="bi bi-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. SEKCJA KONTAKTOWA Z FORMULARZEM (<section id="kontakt">) -->
-        <section id="kontakt" class="py-5">
-            <div class="container py-lg-4">
-                <div class="text-center mb-5">
-                    <h2 class="display-5 section-title mb-3">Skontaktuj Się z Nami</h2>
-                    <p class="text-muted fs-5">Masz pytania dotyczące poradnika lub oferty sklepu? Napisz do nas!</p>
-                </div>
-
-                <div class="row g-4 g-lg-5">
-                    <div class="col-lg-5">
-                        <div class="p-4 p-md-5 rounded-4 bg-light h-100 border border-light">
-                            <h3 class="h3 mb-4 text-brand">Dane Kontaktowe</h3>
-                            <p class="text-muted mb-4">
-                                Chętnie odpowiemy na wszelkie pytania, pomożemy w doborze rozmiaru szelek lub zabawek dla Twojego psiaka.
-                            </p>
-                            
-                            <div class="d-flex align-items-start mb-4">
-                                <div class="contact-icon-box rounded-circle p-3 me-3 flex-shrink-0">
-                                    <i class="bi bi-geo-alt-fill fs-4 text-brand"></i>
-                                </div>
-                                <div>
-                                    <h4 class="h6 font-heading mb-1">Adres:</h4>
-                                    <p class="mb-0 text-muted">ul. Psia 12/4, 00-001 Warszawa</p>
-                                </div>
-                            </div>
-
-                            <div class="d-flex align-items-start mb-4">
-                                <div class="contact-icon-box rounded-circle p-3 me-3 flex-shrink-0">
-                                    <i class="bi bi-envelope-fill fs-4 text-brand"></i>
-                                </div>
-                                <div>
-                                    <h4 class="h6 font-heading mb-1">E-mail:</h4>
-                                    <p class="mb-0 text-muted">kontakt@reksieiazorki.pl</p>
-                                </div>
-                            </div>
-
-                            <div class="d-flex align-items-start mb-4">
-                                <div class="contact-icon-box rounded-circle p-3 me-3 flex-shrink-0">
-                                    <i class="bi bi-telephone-fill fs-4 text-brand"></i>
-                                </div>
-                                <div>
-                                    <h4 class="h6 font-heading mb-1">Telefon:</h4>
-                                    <p class="mb-0 text-muted">+48 123 456 789</p>
-                                </div>
-                            </div>
-
-                            <hr class="my-4">
-
-                            <h4 class="h6 font-heading mb-3">Obserwuj nas:</h4>
-                            <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-outline-dark btn-sm rounded-circle p-2 social-btn" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                                <a href="#" class="btn btn-outline-dark btn-sm rounded-circle p-2 social-btn" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                                <a href="#" class="btn btn-outline-dark btn-sm rounded-circle p-2 social-btn" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-7">
-                        <div class="p-4 p-md-5 rounded-4 border bg-white shadow-sm">
-                            <form id="contactForm" onsubmit="event.preventDefault(); alert('Dziękujemy! Twoja wiadomość została wysłana.');">
-                                <div class="row g-3">
-                                    <div class="col-md-6">
-                                        <label for="fullName" class="form-label font-heading fw-semibold">Imię i nazwisko <span class="text-danger">*</span></label>
-                                        <input type="text" class="form-control form-control-lg fs-6" id="fullName" placeholder="Jan Kowalski" required>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label for="email" class="form-label font-heading fw-semibold">Adres e-mail <span class="text-danger">*</span></label>
-                                        <input type="email" class="form-control form-control-lg fs-6" id="email" placeholder="jan@example.com" required>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <label for="subject" class="form-label font-heading fw-semibold">Temat wiadomości <span class="text-danger">*</span></label>
-                                        <select class="form-select form-select-lg fs-6" id="subject" required>
-                                            <option value="" selected disabled>Wybierz temat zapytania...</option>
-                                            <option value="blog">Pytanie do artykułu na blogu / porady</option>
-                                            <option value="sklep">Pytanie dotyczące zabawek i akcesoriów</option>
-                                            <option value="zamowienie">Status zamówienia</option>
-                                            <option value="wspolpraca">Współpraca / Reklama</option>
-                                            <option value="inne">Inne zapytanie</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-12">
-                                        <label for="message" class="form-label font-heading fw-semibold">Treść wiadomości <span class="text-danger">*</span></label>
-                                        <textarea class="form-control fs-6" id="message" rows="5" placeholder="Napisz, w czym możemy Ci pomóc..." required></textarea>
-                                    </div>
-
-                                    <div class="col-12 text-end pt-2">
-                                        <button type="submit" class="btn btn-cta btn-lg px-5 py-3 shadow-sm font-heading fw-bold w-100 w-sm-auto">
-                                            <i class="bi bi-send-fill me-2"></i> WYŚLIJ WIADOMOŚĆ
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- 6. STOPKA SERWISU (<footer>) -->
-    <footer class="text-light py-5 border-top">
-        <div class="container">
-            <div class="row g-4 mb-4">
-                <div class="col-lg-4">
-                    <div class="d-flex align-items-center gap-2 mb-3">
-                        <i class="bi bi-paw-fill fs-2 text-warning"></i>
-                        <span class="font-heading fs-3">Reksie i Azorki</span>
-                    </div>
-                    <p class="text-white-50 small mb-0">
-                        Najlepszy poradnik dla miłośników psów i sklep internetowy stworzony z miłością do zwierząt.
-                    </p>
-                </div>
-                <div class="col-6 col-lg-2 ms-auto">
-                    <h5 class="font-heading fs-6 mb-3 text-warning">Nawigacja</h5>
-                    <ul class="list-unstyled small mb-0">
-                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Strona Główna</a></li>
-                        <li class="mb-2"><a href="#o-nas" class="text-white-50 text-decoration-none">O Nas</a></li>
-                        <li class="mb-2"><a href="#oferta" class="text-white-50 text-decoration-none">Sklep i Porady</a></li>
-                        <li><a href="#kontakt" class="text-white-50 text-decoration-none">Kontakt</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-lg-3">
-                    <h5 class="font-heading fs-6 mb-3 text-warning">Kategorie</h5>
-                    <ul class="list-unstyled small mb-0">
-                        <li class="mb-2"><a href="#oferta" class="text-white-50 text-decoration-none">Rasy psów</a></li>
-                        <li class="mb-2"><a href="#oferta" class="text-white-50 text-decoration-none">Zabawki interaktywne</a></li>
-                        <li class="mb-2"><a href="#oferta" class="text-white-50 text-decoration-none">Akcesoria spacerowe</a></li>
-                        <li><a href="#oferta" class="text-white-50 text-decoration-none">Porady behawioralne</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3">
-                    <h5 class="font-heading fs-6 mb-3 text-warning">Godziny Pracy</h5>
-                    <p class="text-white-50 small mb-1">Poniedziałek - Piątek: 8:00 - 18:00</p>
-                    <p class="text-white-50 small mb-1">Sobota: 9:00 - 14:00</p>
-                    <p class="text-white-50 small mb-0">Niedziela: Zamknięte</p>
-                </div>
-            </div>
-            
-            <hr class="border-secondary my-4">
-            
-            <div class="row align-items-center small text-white-50">
-                <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
-                    <p class="mb-0">&copy; 2026 Reksie i Azorki. Wszelkie prawa zastrzeżone.</p>
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <span>Marka Komercyjna | Reksie i Azorki Sp. z o.o.</span>
-                </div>
-            </div>
+  <!-- 1. NAWIGACJA -->
+  <header>
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top site-nav" aria-label="Nawigacja główna">
+      <div class="container">
+        <a class="navbar-brand brand" href="#hero">
+          <i class="bi bi-heart-pulse-fill brand-icon" aria-hidden="true"></i>
+          Reksie <span class="brand-amp">i</span> Azorki
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Pokaż lub ukryj menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#o-nas">O nas</a></li>
+            <li class="nav-item"><a class="nav-link" href="#oferta">Oferta</a></li>
+            <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+            <li class="nav-item ms-lg-2"><a class="btn btn-brand btn-sm px-4" href="#kontakt">Napisz do nas</a></li>
+          </ul>
         </div>
-    </footer>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Bootstrap 5 JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <main>
+    <!-- 2. HERO -->
+    <section id="hero" class="hero" style="background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1920&q=80');">
+      <div class="hero-overlay"></div>
+      <div class="container position-relative">
+        <div class="row">
+          <div class="col-lg-7 col-xl-6">
+            <span class="eyebrow"><i class="bi bi-stars" aria-hidden="true"></i> Blog • Porady • Sklep</span>
+            <h1 class="hero-title">
+              Reksie i Azorki
+              <span class="hero-tagline">Szczęśliwy pies, spokojny opiekun.</span>
+            </h1>
+            <p class="hero-lead">
+              Piszemy o rasach, psich zwyczajach i codziennej opiece – prostym językiem, opartym na wiedzy behawiorystów i weterynarzy.
+              W naszym sklepie znajdziesz sprawdzone zabawki i akcesoria, które sami testujemy z naszymi czworonogami.
+            </p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="#kontakt" class="btn btn-brand btn-lg px-4">Skontaktuj się z nami <i class="bi bi-arrow-right ms-1" aria-hidden="true"></i></a>
+              <a href="#oferta" class="btn btn-outline-light btn-lg px-4">Zobacz, co oferujemy</a>
+            </div>
+            <ul class="hero-stats list-unstyled d-flex flex-wrap gap-4 mt-5 mb-0">
+              <li><strong>120+</strong><span>opisanych ras</span></li>
+              <li><strong>350+</strong><span>poradników</span></li>
+              <li><strong>15 tys.</strong><span>zadowolonych psów</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. O NAS -->
+    <section id="o-nas" class="section">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <span class="section-kicker">O nas</span>
+            <h2 class="section-title">Kochamy psy. Dzielimy się wiedzą.</h2>
+            <p class="lead-text">
+              Reksie i Azorki to miejsce stworzone przez opiekunów psów dla opiekunów psów. Zaczęło się od
+              dwóch kundelków i masy pytań – dziś to blog i sklep, z których korzystają tysiące rodzin w całej Polsce.
+            </p>
+            <p>
+              <strong>Nasza misja</strong> jest prosta: pomagać ludziom lepiej rozumieć swoje psy. Wierzymy, że świadomy
+              opiekun to szczęśliwy pies – dlatego każdy artykuł konsultujemy ze specjalistami, a każdy produkt w sklepie
+              przechodzi nasze „psie testy" wytrzymałości i bezpieczeństwa.
+            </p>
+            <ul class="feature-list list-unstyled">
+              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Treści konsultowane z weterynarzami i behawiorystami</li>
+              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Akcesoria wybierane z myślą o bezpieczeństwie</li>
+              <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i> Przyjazny język – bez oceniania, z empatią</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="about-media">
+              <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?auto=format&fit=crop&w=1000&q=80"
+                   class="img-fluid about-img" alt="Uśmiechnięta kobieta przytulająca psa na spacerze" loading="lazy">
+              <div class="about-badge">
+                <i class="bi bi-award-fill" aria-hidden="true"></i>
+                <div><strong>Od 2018</strong><span>z miłości do psów</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. OFERTA -->
+    <section id="oferta" class="section section-alt">
+      <div class="container">
+        <div class="text-center mx-auto section-intro">
+          <span class="section-kicker">Oferta</span>
+          <h2 class="section-title">Wszystko, czego potrzebuje Twój pies</h2>
+          <p>Trzy filary Reksiów i Azorków – wiedza, praktyka i sprawdzone produkty.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="card offer-card h-100">
+              <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Golden retriever na łące" loading="lazy">
+              <div class="card-body">
+                <span class="offer-icon"><i class="bi bi-book-half" aria-hidden="true"></i></span>
+                <h3 class="card-title">Encyklopedia ras</h3>
+                <p class="card-text">Charakter, potrzeby ruchowe, zdrowie i pielęgnacja ponad 120 ras. Pomożemy dobrać psa do Twojego stylu życia.</p>
+                <a href="#kontakt" class="card-link-brand">Zapytaj o rasę <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="card offer-card offer-card--featured h-100">
+              <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Opiekun trenujący psa w parku" loading="lazy">
+              <div class="card-body">
+                <span class="offer-badge">Najczęściej czytane</span>
+                <span class="offer-icon"><i class="bi bi-lightbulb-fill" aria-hidden="true"></i></span>
+                <h3 class="card-title">Porady i ciekawostki</h3>
+                <p class="card-text">Żywienie, szkolenie, zdrowie i psia psychologia. Praktyczne poradniki krok po kroku oraz zaskakujące fakty o psach.</p>
+                <a href="#kontakt" class="card-link-brand">Poproś o poradę <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-12 col-lg-4">
+            <article class="card offer-card h-100">
+              <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Pies bawiący się zabawką" loading="lazy">
+              <div class="card-body">
+                <span class="offer-icon"><i class="bi bi-bag-heart-fill" aria-hidden="true"></i></span>
+                <h3 class="card-title">Sklep z akcesoriami</h3>
+                <p class="card-text">Zabawki, smycze, szelki, legowiska i miski – starannie wybrane, przetestowane i bezpieczne dla Twojego pupila.</p>
+                <a href="#kontakt" class="card-link-brand">Zapytaj o produkt <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. KONTAKT -->
+    <section id="kontakt" class="section">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-5">
+            <span class="section-kicker">Kontakt</span>
+            <h2 class="section-title">Porozmawiajmy o Twoim psie</h2>
+            <p>Masz pytanie o rasę, zachowanie pupila albo produkt ze sklepu? Odpowiadamy w ciągu 24 godzin w dni robocze.</p>
+            <ul class="contact-list list-unstyled">
+              <li>
+                <span class="contact-icon"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i></span>
+                <div><strong>Adres</strong><address class="mb-0">ul. Psia 12, 00-001 Warszawa</address></div>
+              </li>
+              <li>
+                <span class="contact-icon"><i class="bi bi-envelope-fill" aria-hidden="true"></i></span>
+                <div><strong>E-mail</strong><a href="mailto:kontakt@reksieiazorki.pl">kontakt@reksieiazorki.pl</a></div>
+              </li>
+              <li>
+                <span class="contact-icon"><i class="bi bi-telephone-fill" aria-hidden="true"></i></span>
+                <div><strong>Telefon</strong><a href="tel:+48500123456">+48 500 123 456</a></div>
+              </li>
+              <li>
+                <span class="contact-icon"><i class="bi bi-clock-fill" aria-hidden="true"></i></span>
+                <div><strong>Godziny</strong><span>pon.–pt. 9:00–17:00</span></div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-7">
+            <form id="contactForm" class="contact-form needs-validation" novalidate
+                  action="mailto:kontakt@reksieiazorki.pl" method="post" enctype="text/plain">
+              <h3 class="form-title">Formularz zapytania</h3>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Imię i nazwisko *</label>
+                  <input type="text" class="form-control" id="name" name="imie_nazwisko" placeholder="Anna Kowalska" required minlength="3" maxlength="100" autocomplete="name">
+                  <div class="invalid-feedback">Podaj imię i nazwisko (min. 3 znaki).</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Adres e-mail *</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="anna@przyklad.pl" required maxlength="255" autocomplete="email">
+                  <div class="invalid-feedback">Podaj poprawny adres e-mail.</div>
+                </div>
+                <div class="col-12">
+                  <label for="topic" class="form-label">Temat wiadomości *</label>
+                  <select class="form-select" id="topic" name="temat" required>
+                    <option value="" selected disabled>Wybierz temat…</option>
+                    <option>Pytanie o rasę psa</option>
+                    <option>Porada dotycząca opieki lub zachowania</option>
+                    <option>Zamówienie / produkt ze sklepu</option>
+                    <option>Współpraca</option>
+                    <option>Inne</option>
+                  </select>
+                  <div class="invalid-feedback">Wybierz temat wiadomości.</div>
+                </div>
+                <div class="col-12">
+                  <label for="message" class="form-label">Treść zapytania *</label>
+                  <textarea class="form-control" id="message" name="wiadomosc" rows="5" placeholder="Opowiedz nam o swoim psie i pytaniu…" required minlength="10" maxlength="1000"></textarea>
+                  <div class="invalid-feedback">Wiadomość musi mieć co najmniej 10 znaków.</div>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="consent" required>
+                    <label class="form-check-label" for="consent">Wyrażam zgodę na przetwarzanie moich danych w celu udzielenia odpowiedzi. *</label>
+                    <div class="invalid-feedback">Zgoda jest wymagana.</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-brand btn-lg w-100">Wyślij wiadomość <i class="bi bi-send-fill ms-1" aria-hidden="true"></i></button>
+                </div>
+              </div>
+              <div id="formSuccess" class="alert alert-success mt-3 d-none" role="status">
+                <i class="bi bi-check-circle-fill" aria-hidden="true"></i> Dziękujemy! Twoja wiadomość została przygotowana do wysłania – odpowiemy najszybciej, jak to możliwe.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 6. STOPKA -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-md-6">
+          <a href="#hero" class="brand brand--footer">Reksie <span class="brand-amp">i</span> Azorki</a>
+          <p class="mt-2 mb-0">Reksie i Azorki sp. z o.o.<br>ul. Psia 12, 00-001 Warszawa<br>NIP: 123-456-78-90 • REGON: 123456789</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <nav aria-label="Nawigacja w stopce">
+            <a href="#o-nas">O nas</a> · <a href="#oferta">Oferta</a> · <a href="#kontakt">Kontakt</a>
+          </nav>
+          <a href="#hero" class="back-top mt-3"><i class="bi bi-arrow-up" aria-hidden="true"></i> Do góry</a>
+        </div>
+      </div>
+      <hr>
+      <p class="copyright mb-0">&copy; <span id="year">2026</span> Reksie i Azorki. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Bieżący rok w stopce
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Zwijanie menu po kliknięciu w link (mobile)
+    const navMenu = document.getElementById('navMenu');
+    document.querySelectorAll('#navMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navMenu.classList.contains('show')) bootstrap.Collapse.getOrCreateInstance(navMenu).hide();
+      });
+    });
+
+    // Cień nawigacji po przewinięciu
+    const nav = document.getElementById('mainNav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+    window.addEventListener('scroll', onScroll); onScroll();
+
+    // Walidacja formularza
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', e => {
+      if (!form.checkValidity()) {
+        e.preventDefault(); e.stopPropagation();
+        form.classList.add('was-validated');
+        return;
+      }
+      form.classList.add('was-validated');
+      document.getElementById('formSuccess').classList.remove('d-none');
+    });
+  </script>
 </body>
 </html>

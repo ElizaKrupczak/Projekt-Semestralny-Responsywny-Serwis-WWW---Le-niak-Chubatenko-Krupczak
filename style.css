@@ -1,191 +1,129 @@
+/* =========================================================
+   Reksie i Azorki – arkusz stylów (Księga Stylu)
+   ========================================================= */
 :root {
-    --primary-color: #86BDE6;   /* Kolor wiodący */
-    --secondary-color: #EECF75; /* Kolor pomocniczy */
-    --cta-color: #FFF8D9;       /* Kolor akcentu / CTA */
-    --text-color: #404364;      /* Kolor tekstu podstawowego */
-    
-    --font-heading: 'Rubik Spray Paint', cursive;
-    --font-body: 'Lora', serif;
+  --ra-primary: #86BDE6;
+  --ra-primary-dark: #5A9BCD;
+  --ra-secondary: #EECF75;
+  --ra-accent: #FFF8D9;
+  --ra-text: #404364;
+  --ra-text-soft: #6B6E8E;
+  --ra-white: #FFFFFF;
+  --ra-radius: 1.25rem;
+  --ra-shadow: 0 18px 40px -18px rgba(64, 67, 100, .35);
+  --ra-font-head: "Rubik Spray Paint", system-ui, sans-serif;
+  --ra-font-body: "Lora", Georgia, serif;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; scroll-padding-top: 85px; }
 
 body {
-    font-family: var(--font-body);
-    color: var(--text-color);
-    background-color: #ffffff;
-    line-height: 1.6;
-    padding-top: 76px;
+  font-family: var(--ra-font-body);
+  color: var(--ra-text);
+  background: var(--ra-white);
+  font-size: 1.05rem;
+  line-height: 1.75;
 }
 
-/* Nagłówki */
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-.navbar-brand,
-.section-title {
-    font-family: var(--font-heading);
-    letter-spacing: 0.5px;
+h1, h2, h3, .brand { font-family: var(--ra-font-head); font-weight: 400; letter-spacing: .5px; color: var(--ra-text); }
+a { color: var(--ra-primary-dark); }
+a:hover { color: var(--ra-text); }
+
+.skip-link { position: absolute; left: -999px; top: 0; background: var(--ra-secondary); color: var(--ra-text); padding: .5rem 1rem; z-index: 2000; }
+.skip-link:focus { left: 1rem; }
+
+/* ---------- Nawigacja ---------- */
+.site-nav { background: rgba(255, 248, 217, .92); backdrop-filter: blur(10px); padding: 1rem 0; transition: all .3s ease; }
+.site-nav.scrolled { padding: .5rem 0; box-shadow: 0 6px 24px -12px rgba(64, 67, 100, .35); }
+.brand { font-size: 1.6rem; color: var(--ra-text) !important; text-decoration: none; display: inline-flex; align-items: center; gap: .5rem; }
+.brand-icon { color: var(--ra-primary-dark); }
+.brand-amp { color: var(--ra-primary-dark); }
+.site-nav .nav-link { color: var(--ra-text); font-weight: 600; position: relative; }
+.site-nav .nav-link::after { content: ""; position: absolute; left: .5rem; right: .5rem; bottom: .25rem; height: 2px; background: var(--ra-secondary); transform: scaleX(0); transition: transform .25s; }
+.site-nav .nav-link:hover::after, .site-nav .nav-link.active::after { transform: scaleX(1); }
+.site-nav .nav-link.active { color: var(--ra-primary-dark); }
+.navbar-toggler { border: 2px solid var(--ra-text); }
+.navbar-toggler:focus { box-shadow: 0 0 0 .2rem var(--ra-primary); }
+@media (max-width: 991.98px) {
+  .navbar-collapse { background: var(--ra-accent); border-radius: var(--ra-radius); padding: 1rem; margin-top: .75rem; box-shadow: var(--ra-shadow); }
 }
 
-.text-brand {
-    color: var(--text-color);
-}
+/* ---------- Przyciski ---------- */
+.btn-brand { background: var(--ra-secondary); color: var(--ra-text); border: 2px solid var(--ra-secondary); border-radius: 999px; font-weight: 700; transition: transform .2s, box-shadow .2s, background .2s; }
+.btn-brand:hover, .btn-brand:focus { background: var(--ra-accent); color: var(--ra-text); border-color: var(--ra-secondary); transform: translateY(-2px); box-shadow: 0 10px 24px -10px rgba(238, 207, 117, .9); }
+.btn-outline-light { border-radius: 999px; border-width: 2px; font-weight: 700; }
+.btn-outline-light:hover { color: var(--ra-text); }
 
-/* Navbar */
-.navbar {
-    background-color: var(--primary-color) !important;
-    transition: all 0.3s ease;
-}
+/* ---------- Hero ---------- */
+.hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: 140px 0 80px; background-size: cover; background-position: center; color: var(--ra-white); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(100deg, rgba(64, 67, 100, .92) 0%, rgba(64, 67, 100, .7) 45%, rgba(134, 189, 230, .15) 100%); }
+.eyebrow { display: inline-block; background: rgba(255, 248, 217, .15); border: 1px solid rgba(255, 248, 217, .4); color: var(--ra-accent); padding: .35rem 1rem; border-radius: 999px; font-size: .9rem; margin-bottom: 1.25rem; }
+.hero-title { color: var(--ra-accent); font-size: clamp(2.8rem, 6vw, 4.8rem); line-height: 1.05; margin-bottom: 1.25rem; }
+.hero-tagline { display: block; color: var(--ra-secondary); font-size: clamp(1.4rem, 2.6vw, 2.1rem); margin-top: .75rem; }
+.hero-lead { font-size: 1.15rem; color: rgba(255, 255, 255, .9); max-width: 36rem; }
+.hero-stats strong { display: block; font-family: var(--ra-font-head); font-size: 2rem; color: var(--ra-primary); line-height: 1; }
+.hero-stats span { font-size: .9rem; color: rgba(255, 255, 255, .8); }
 
-.navbar-brand {
-    color: var(--text-color) !important;
-    font-size: 1.75rem;
-}
+/* ---------- Sekcje ---------- */
+.section { padding: 100px 0; }
+.section-alt { background: var(--ra-accent); }
+.section-intro { max-width: 640px; margin-bottom: 3.5rem; }
+.section-kicker { display: inline-block; text-transform: uppercase; letter-spacing: 2px; font-size: .8rem; font-weight: 700; color: var(--ra-primary-dark); margin-bottom: .5rem; }
+.section-kicker::before { content: "🐾 "; }
+.section-title { font-size: clamp(2rem, 4vw, 2.9rem); margin-bottom: 1.25rem; line-height: 1.15; }
+.lead-text { font-size: 1.2rem; font-style: italic; color: var(--ra-text); }
 
-.nav-link {
-    color: var(--text-color) !important;
-    font-size: 1.1rem;
-    transition: color 0.2s ease, transform 0.2s ease;
-}
+/* O nas */
+.feature-list li { display: flex; gap: .75rem; margin-bottom: .6rem; }
+.feature-list i { color: var(--ra-primary-dark); margin-top: .2rem; }
+.about-media { position: relative; }
+.about-media::before { content: ""; position: absolute; inset: 24px -24px -24px 24px; background: var(--ra-secondary); border-radius: var(--ra-radius); z-index: -1; }
+.about-img { border-radius: var(--ra-radius); box-shadow: var(--ra-shadow); aspect-ratio: 4 / 3.4; object-fit: cover; width: 100%; }
+.about-badge { position: absolute; left: -12px; bottom: 28px; background: var(--ra-white); border-radius: 1rem; padding: .9rem 1.2rem; display: flex; gap: .75rem; align-items: center; box-shadow: var(--ra-shadow); }
+.about-badge i { font-size: 1.8rem; color: var(--ra-primary-dark); }
+.about-badge strong { display: block; line-height: 1.1; }
+.about-badge span { font-size: .85rem; color: var(--ra-text-soft); }
 
-.nav-link:hover {
-    color: #000000 !important;
-    transform: translateY(-1px);
-}
+/* Karty oferty */
+.offer-card { border: 0; border-radius: var(--ra-radius); overflow: hidden; box-shadow: var(--ra-shadow); transition: transform .3s, box-shadow .3s; background: var(--ra-white); }
+.offer-card:hover { transform: translateY(-8px); box-shadow: 0 28px 50px -20px rgba(64, 67, 100, .45); }
+.offer-card .card-img-top { height: 220px; object-fit: cover; }
+.offer-card .card-body { position: relative; padding: 2.5rem 1.75rem 1.75rem; }
+.offer-card .card-title { font-size: 1.6rem; }
+.offer-card .card-text { color: var(--ra-text-soft); }
+.offer-card--featured { outline: 3px solid var(--ra-primary); }
+.offer-icon { position: absolute; top: -28px; left: 1.75rem; width: 56px; height: 56px; border-radius: 50%; background: var(--ra-primary); color: var(--ra-white); display: grid; place-items: center; font-size: 1.4rem; box-shadow: 0 8px 20px -8px rgba(90, 155, 205, .9); }
+.offer-badge { position: absolute; top: 1rem; right: 1rem; background: var(--ra-secondary); color: var(--ra-text); font-size: .75rem; font-weight: 700; padding: .2rem .7rem; border-radius: 999px; }
+.card-link-brand { font-weight: 700; text-decoration: none; color: var(--ra-primary-dark); }
+.card-link-brand i { transition: transform .2s; display: inline-block; }
+.card-link-brand:hover i { transform: translateX(4px); }
 
-/* Hero Section - Zoptymalizowana wysokość dla monitorów komputerowych */
-#hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #b8dbf4 100%);
-    min-height: 85vh;
-    padding: 60px 0;
-}
-
-.badge-tag {
-    background-color: var(--cta-color);
-    color: var(--text-color);
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-.hero-subtitle {
-    color: var(--text-color);
-    opacity: 0.95;
-}
-
-/* Przyciski */
-.btn-cta {
-    background-color: var(--cta-color) !important;
-    color: var(--text-color) !important;
-    border: 2px solid var(--secondary-color) !important;
-    border-radius: 50rem;
-    font-size: 1.1rem;
-    transition: all 0.3s ease !important;
-}
-
-.btn-cta:hover {
-    background-color: var(--secondary-color) !important;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12) !important;
-}
-
-.btn-outline-brand {
-    border: 2px solid var(--text-color) !important;
-    color: var(--text-color) !important;
-    border-radius: 50rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: all 0.3s ease !important;
-}
-
-.btn-outline-brand:hover {
-    background-color: var(--text-color) !important;
-    color: #ffffff !important;
-    transform: translateY(-3px);
-}
-
-/* Tytuły sekcji */
-.section-title {
-    color: var(--text-color);
-    position: relative;
-    display: inline-block;
-}
-
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60%;
-    height: 4px;
-    background-color: var(--secondary-color);
-    margin: 8px auto 0;
-    border-radius: 2px;
-}
-
-/* Karty Oferty */
-.custom-card {
-    border-radius: 1.25rem;
-    transition: all 0.3s ease;
-    background-color: #ffffff;
-}
-
-.custom-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(64, 67, 100, 0.12) !important;
-}
-
-.card-img-top-wrapper {
-    position: relative;
-    height: 240px;
-    overflow: hidden;
-}
-
-.card-img-top-wrapper img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.custom-card:hover .card-img-top-wrapper img {
-    transform: scale(1.06);
-}
-
-/* Sekcja Kontakt */
-.contact-icon-box {
-    background-color: var(--cta-color);
-    width: 52px;
-    height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.form-control:focus, .form-select:focus {
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 0.25rem rgba(134, 189, 230, 0.35);
-}
-
-.social-btn {
-    width: 38px;
-    height: 38px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-}
-
-.social-btn:hover {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--text-color);
-}
+/* Kontakt */
+.contact-list li { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.25rem; }
+.contact-list strong { display: block; }
+.contact-list a { text-decoration: none; }
+.contact-icon { flex: 0 0 48px; height: 48px; border-radius: 14px; background: var(--ra-accent); color: var(--ra-primary-dark); display: grid; place-items: center; font-size: 1.2rem; }
+.contact-form { background: var(--ra-accent); padding: 2.5rem; border-radius: var(--ra-radius); box-shadow: var(--ra-shadow); }
+.form-title { font-size: 1.7rem; margin-bottom: 1.5rem; }
+.form-label { font-weight: 600; }
+.form-control, .form-select { border-radius: .75rem; border: 2px solid transparent; padding: .75rem 1rem; color: var(--ra-text); }
+.form-control:focus, .form-select:focus { border-color: var(--ra-primary); box-shadow: 0 0 0 .2rem rgba(134, 189, 230, .35); }
+.form-check-input:checked { background-color: var(--ra-primary-dark); border-color: var(--ra-primary-dark); }
 
 /* Stopka */
-footer {
-    background-color: var(--text-color);
-}
+.site-footer { background: var(--ra-text); color: rgba(255, 255, 255, .8); padding: 60px 0 30px; }
+.site-footer a { color: var(--ra-accent); text-decoration: none; }
+.site-footer a:hover { color: var(--ra-secondary); }
+.brand--footer { color: var(--ra-accent) !important; font-size: 1.8rem; }
+.site-footer hr { border-color: rgba(255, 255, 255, .2); margin: 2rem 0 1.25rem; }
+.back-top { display: inline-block; }
+.copyright { font-size: .9rem; text-align: center; }
 
-footer a:hover {
-    color: var(--secondary-color) !important;
+/* Responsywność */
+@media (max-width: 767.98px) {
+  .section { padding: 70px 0; }
+  .hero { padding-top: 120px; min-height: auto; }
+  .contact-form { padding: 1.5rem; }
+  .about-media::before { inset: 14px -10px -14px 14px; }
+  .about-badge { left: 8px; }
 }
