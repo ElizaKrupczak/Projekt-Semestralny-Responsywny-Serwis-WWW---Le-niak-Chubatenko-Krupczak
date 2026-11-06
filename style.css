@@ -11,7 +11,7 @@
   --ra-white: #FFFFFF;
   --ra-radius: 1.25rem;
   --ra-shadow: 0 18px 40px -18px rgba(64, 67, 100, .35);
-  --ra-font-head: "Rubik Spray Paint", system-ui, sans-serif;
+  --ra-font-head: "DynaPuff", system-ui, sans-serif;
   --ra-font-body: "Lora", Georgia, serif;
 }
 
@@ -25,7 +25,7 @@ body {
   line-height: 1.75;
 }
 
-h1, h2, h3, .brand { font-family: var(--ra-font-head); font-weight: 400; letter-spacing: .5px; color: var(--ra-text); }
+h1, h2, h3, h4, .brand { font-family: var(--ra-font-head); font-weight: 600; letter-spacing: 0; line-height: 1.25; color: var(--ra-text); }
 a { color: var(--ra-primary-dark); }
 a:hover { color: var(--ra-text); }
 
@@ -197,3 +197,4 @@ figcaption { font-size: .85rem; color: var(--ra-text-soft); margin-top: .6rem; }
 
 /* Szerokie odstępy Bootstrapa bez przewijania poziomego na telefonie. */
 @media (max-width: 767.98px) { .row.g-5 { --bs-gutter-x: 1.5rem; } }
+.nav-link--blog { font-weight: 700; }
