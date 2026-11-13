@@ -15,8 +15,15 @@
           <li class="nav-item"><a class="nav-link" href="index.html#o-nas">O nas</a></li>
           <li class="nav-item"><a class="nav-link nav-link--blog" href="blog.html"><i aria-hidden="true" class="bi bi-journal-text me-1"></i>Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#oferta">Oferta</a></li>
+          <li class="nav-item"><a class="nav-link" href="sklep.html"><i aria-hidden="true" class="bi bi-bag me-1"></i>Sklep</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#kontakt">Kontakt</a></li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-brand btn-sm px-4" href="index.html#kontakt">Napisz do nas</a></li>
+          <li class="nav-item ms-lg-2 d-flex align-items-center gap-2">
+            <a class="nav-icon" href="konto.html" aria-label="Moje konto"><i aria-hidden="true" class="bi bi-person-circle"></i></a>
+            <a class="nav-icon position-relative" href="koszyk.html" aria-label="Koszyk, 2 produkty">
+              <i aria-hidden="true" class="bi bi-cart3"></i>
+              <span class="badge rounded-pill cart-badge">2</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -33,7 +40,7 @@
       </div>
       <div class="col-md-6 text-md-end">
         <nav aria-label="Nawigacja w stopce">
-          <a href="index.html#o-nas">O nas</a> · <a href="index.html#oferta">Oferta</a> · <a href="index.html#kontakt">Kontakt</a> · <a href="blog.html">Blog</a>
+          <a href="index.html#o-nas">O nas</a> · <a href="index.html#oferta">Oferta</a> · <a href="index.html#kontakt">Kontakt</a> · <a href="blog.html">Blog</a> · <a href="sklep.html">Sklep</a>
         </nav>
         <a class="back-top mt-3" href="index.html#hero"><i aria-hidden="true" class="bi bi-arrow-up"></i> Do góry</a>
       </div>
@@ -50,6 +57,11 @@
 
   // Podświetl "Blog" na stronach bloga i artykułu
   const page = location.pathname.split("/").pop() || "index.html";
+  const shopPages = ["sklep.html", "produkt.html", "koszyk.html", "zamowienie.html"];
+  if (shopPages.includes(page)) {
+    const shop = document.querySelector('#mainNav a[href="sklep.html"]');
+    if (shop) { shop.classList.add("active"); shop.setAttribute("aria-current", "page"); }
+  }
   if (page === "blog.html" || page === "single.html") {
     const blog = document.querySelector('#mainNav a[href="blog.html"]');
     if (blog) {
@@ -84,8 +96,15 @@ Nata
           <li class="nav-item"><a class="nav-link" href="index.html#o-nas">O nas</a></li>
           <li class="nav-item"><a class="nav-link nav-link--blog" href="blog.html"><i aria-hidden="true" class="bi bi-journal-text me-1"></i>Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#oferta">Oferta</a></li>
+          <li class="nav-item"><a class="nav-link" href="sklep.html"><i aria-hidden="true" class="bi bi-bag me-1"></i>Sklep</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#kontakt">Kontakt</a></li>
-          <li class="nav-item ms-lg-2"><a class="btn btn-brand btn-sm px-4" href="index.html#kontakt">Napisz do nas</a></li>
+          <li class="nav-item ms-lg-2 d-flex align-items-center gap-2">
+            <a class="nav-icon" href="konto.html" aria-label="Moje konto"><i aria-hidden="true" class="bi bi-person-circle"></i></a>
+            <a class="nav-icon position-relative" href="koszyk.html" aria-label="Koszyk, 2 produkty">
+              <i aria-hidden="true" class="bi bi-cart3"></i>
+              <span class="badge rounded-pill cart-badge">2</span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -103,7 +122,7 @@ Nata
       </div>
       <div class="col-md-6 text-md-end">
         <nav aria-label="Nawigacja w stopce">
-          <a href="index.html#o-nas">O nas</a> · <a href="index.html#oferta">Oferta</a> · <a href="index.html#kontakt">Kontakt</a> · <a href="blog.html">Blog</a>
+          <a href="index.html#o-nas">O nas</a> · <a href="index.html#oferta">Oferta</a> · <a href="index.html#kontakt">Kontakt</a> · <a href="blog.html">Blog</a> · <a href="sklep.html">Sklep</a>
         </nav>
         <a class="back-top mt-3" href="index.html#hero"><i aria-hidden="true" class="bi bi-arrow-up"></i> Do góry</a>
       </div>
@@ -122,7 +141,12 @@ Nata
 
     // Podświetla "Blog" na stronie bloga i artykułu
     var page = location.pathname.split("/").pop() || "index.html";
-    if (page === "blog.html" || page === "single.html") {
+    const shopPages = ["sklep.html", "produkt.html", "koszyk.html", "zamowienie.html"];
+  if (shopPages.includes(page)) {
+    const shop = document.querySelector('#mainNav a[href="sklep.html"]');
+    if (shop) { shop.classList.add("active"); shop.setAttribute("aria-current", "page"); }
+  }
+  if (page === "blog.html" || page === "single.html") {
       var blog = document.querySelector('#mainNav a[href="blog.html"]');
       if (blog) {
         blog.classList.add("active");
