@@ -1,37 +1,133 @@
-/* =========================================
-   MODUŁ E-COMMERCE
-   ========================================= */
-
-.page-padding-top {
-  padding-top: 100px;
+/* =========================================================
+   Reksie i Azorki – Główny arkusz stylów
+   ========================================================= */
+:root {
+  --ra-primary: #86BDE6;
+  --ra-primary-dark: #5A9BCD;
+  --ra-secondary: #EECF75;
+  --ra-accent: #FFF8D9;
+  --ra-text: #404364;
+  --ra-text-soft: #6B6E8E;
+  --ra-white: #FFFFFF;
+  --ra-radius: 1.25rem;
+  --ra-shadow: 0 18px 40px -18px rgba(64, 67, 100, .35);
+  --ra-font-head: "DynaPuff", system-ui, sans-serif;
+  --ra-font-body: "Lora", Georgia, serif;
 }
 
-/* Karta produktu */
+html { scroll-behavior: smooth; scroll-padding-top: 85px; }
+body {
+  font-family: var(--ra-font-body);
+  color: var(--ra-text);
+  background: var(--ra-white);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+h1, h2, h3, h4, .brand { font-family: var(--ra-font-head); font-weight: 600; letter-spacing: 0; line-height: 1.25; color: var(--ra-text); }
+a { color: var(--ra-primary-dark); }
+a:hover { color: var(--ra-text); }
+
+.skip-link { position: absolute; left: -999px; top: 0; background: var(--ra-secondary); color: var(--ra-text); padding: .5rem 1rem; z-index: 2000; }
+.skip-link:focus { left: 1rem; }
+
+/* ---------- Nawigacja ---------- */
+.site-nav { background: rgba(255, 248, 217, .92); backdrop-filter: blur(10px); padding: 1rem 0; transition: all .3s ease; }
+.site-nav.scrolled { padding: .5rem 0; box-shadow: 0 6px 24px -12px rgba(64, 67, 100, .35); }
+.brand { font-size: 1.6rem; color: var(--ra-text) !important; text-decoration: none; display: inline-flex; align-items: center; gap: .5rem; }
+.brand-icon { color: var(--ra-primary-dark); }
+.brand-amp { color: var(--ra-primary-dark); }
+.site-nav .nav-link { color: var(--ra-text); font-weight: 600; position: relative; }
+.site-nav .nav-link::after { content: ""; position: absolute; left: .5rem; right: .5rem; bottom: .25rem; height: 2px; background: var(--ra-secondary); transform: scaleX(0); transition: transform .25s; }
+.site-nav .nav-link:hover::after, .site-nav .nav-link.active::after { transform: scaleX(1); }
+.site-nav .nav-link.active { color: var(--ra-primary-dark); }
+.nav-icon-link { transition: color 0.2s; }
+.nav-icon-link:hover { color: var(--ra-primary-dark) !important; }
+.navbar-toggler { border: 2px solid var(--ra-text); }
+.navbar-toggler:focus { box-shadow: 0 0 0 .2rem var(--ra-primary); }
+@media (max-width: 991.98px) {
+  .navbar-collapse { background: var(--ra-accent); border-radius: var(--ra-radius); padding: 1rem; margin-top: .75rem; box-shadow: var(--ra-shadow); }
+}
+
+/* ---------- Przyciski ---------- */
+.btn-brand { background: var(--ra-secondary); color: var(--ra-text); border: 2px solid var(--ra-secondary); border-radius: 999px; font-weight: 700; transition: transform .2s, box-shadow .2s, background .2s; }
+.btn-brand:hover, .btn-brand:focus { background: var(--ra-accent); color: var(--ra-text); border-color: var(--ra-secondary); transform: translateY(-2px); box-shadow: 0 10px 24px -10px rgba(238, 207, 117, .9); }
+.btn-outline-light { border-radius: 999px; border-width: 2px; font-weight: 700; }
+.btn-outline-light:hover { color: var(--ra-text); }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: 140px 0 80px; background-size: cover; background-position: center; color: var(--ra-white); }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(100deg, rgba(64, 67, 100, .92) 0%, rgba(64, 67, 100, .7) 45%, rgba(134, 189, 230, .15) 100%); }
+.eyebrow { display: inline-block; background: rgba(255, 248, 217, .15); border: 1px solid rgba(255, 248, 217, .4); color: var(--ra-accent); padding: .35rem 1rem; border-radius: 999px; font-size: .9rem; margin-bottom: 1.25rem; }
+.hero-title { color: var(--ra-accent); font-size: clamp(2.8rem, 6vw, 4.8rem); line-height: 1.05; margin-bottom: 1.25rem; }
+.hero-tagline { display: block; color: var(--ra-secondary); font-size: clamp(1.4rem, 2.6vw, 2.1rem); margin-top: .75rem; }
+.hero-lead { font-size: 1.15rem; color: rgba(255, 255, 255, .9); max-width: 36rem; }
+
+/* ---------- Sekcje ---------- */
+.section { padding: 100px 0; }
+.section-alt { background: var(--ra-accent); }
+.section-intro { max-width: 640px; margin-bottom: 3.5rem; }
+.section-kicker { display: inline-block; text-transform: uppercase; letter-spacing: 2px; font-size: .8rem; font-weight: 700; color: var(--ra-primary-dark); margin-bottom: .5rem; }
+.section-kicker::before { content: "🐾 "; }
+.section-title { font-size: clamp(2rem, 4vw, 2.9rem); margin-bottom: 1.25rem; line-height: 1.15; }
+.lead-text { font-size: 1.2rem; font-style: italic; color: var(--ra-text); }
+
+/* O nas */
+.feature-list li { display: flex; gap: .75rem; margin-bottom: .6rem; }
+.feature-list i { color: var(--ra-primary-dark); margin-top: .2rem; }
+.about-media { position: relative; }
+.about-media::before { content: ""; position: absolute; inset: 24px -24px -24px 24px; background: var(--ra-secondary); border-radius: var(--ra-radius); z-index: -1; }
+.about-img { border-radius: var(--ra-radius); box-shadow: var(--ra-shadow); aspect-ratio: 4 / 3.4; object-fit: cover; width: 100%; }
+
+/* Kontakt */
+.contact-list li { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.25rem; }
+.contact-list strong { display: block; }
+.contact-list a { text-decoration: none; }
+.contact-form { background: var(--ra-accent); padding: 2.5rem; border-radius: var(--ra-radius); box-shadow: var(--ra-shadow); }
+.form-label { font-weight: 600; }
+.form-control, .form-select { border-radius: .75rem; border: 2px solid transparent; padding: .75rem 1rem; color: var(--ra-text); }
+.form-control:focus, .form-select:focus { border-color: var(--ra-primary); box-shadow: 0 0 0 .2rem rgba(134, 189, 230, .35); }
+.form-check-input:checked { background-color: var(--ra-primary-dark); border-color: var(--ra-primary-dark); }
+
+/* Stopka */
+.site-footer { background: var(--ra-text); color: rgba(255, 255, 255, .8); padding: 60px 0 30px; }
+.site-footer a { color: var(--ra-accent); text-decoration: none; }
+.site-footer a:hover { color: var(--ra-secondary); }
+.brand--footer { color: var(--ra-accent) !important; font-size: 1.8rem; }
+.site-footer hr { border-color: rgba(255, 255, 255, .2); margin: 2rem 0 1.25rem; }
+.copyright { font-size: .9rem; text-align: center; }
+
+/* =========================================
+   MODUŁ E-COMMERCE (Ćwiczenie 5)
+   ========================================= */
+
+.page-padding-top { padding-top: 100px; }
+
+/* Karta produktu w siatce */
 .product-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   border: 1px solid var(--bs-border-color);
+  border-radius: var(--ra-radius);
+  overflow: hidden;
+  background: var(--ra-white);
 }
-
 .product-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -15px rgba(64, 67, 100, 0.2);
   border-color: var(--ra-primary);
 }
-
 .product-img-wrapper {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   border-bottom: 1px solid var(--bs-border-color);
   background-color: #f8f9fa;
 }
-
 .product-img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
-
 .product-badge {
   position: absolute;
   top: 12px;
@@ -40,9 +136,11 @@
   font-weight: 600;
   letter-spacing: 0.5px;
   padding: 0.4em 0.6em;
+  border-radius: 999px;
 }
 
-/* Ceny i ocenianie */
+/* Oceny i ceny */
+.rating-stars { color: #ffc107; font-size: 0.9rem; }
 .old-price {
   font-size: 0.95rem;
   font-weight: 500;
@@ -50,30 +148,23 @@
   color: #6c757d;
   margin-right: 0.75rem;
 }
-
 .current-price {
   font-weight: 700;
-  color: var(--ra-primary-dark, #000);
+  color: var(--ra-text);
   font-size: 1.25rem;
 }
 
-.rating i {
-  color: #ffc107;
-  font-size: 0.85rem;
-}
-
-/* Strona detali produktu - galeria */
+/* Karta Produktu - Galeria */
 .product-gallery-main {
   width: 100%;
   max-height: 450px;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   background-color: #f8f9fa;
 }
-
 .product-gallery-thumb {
-  width: calc(33.333% - 0.35rem);
+  width: calc(33.333% - 0.5rem);
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 0.3rem;
@@ -82,7 +173,6 @@
   opacity: 0.6;
   transition: all 0.2s ease;
 }
-
 .product-gallery-thumb:hover,
 .product-gallery-thumb.active {
   opacity: 1;
@@ -90,21 +180,14 @@
 }
 
 /* Koszyk i zamówienie */
-.cart-table {
-  min-width: 600px;
-}
-
+.cart-table { min-width: 600px; }
 .cart-item-img {
   width: 64px;
   height: 64px;
   object-fit: cover;
   border-radius: 0.3rem;
 }
-
-.qty-input {
-  max-width: 80px;
-}
-
+.qty-input { max-width: 80px; }
 .checkout-summary {
   position: sticky;
   top: 110px;
@@ -114,17 +197,17 @@
 /* Panel konta */
 .account-sidebar .list-group-item {
   font-weight: 500;
+  border-color: rgba(0,0,0,0.05);
 }
-
 .account-sidebar .list-group-item.active {
-  background-color: var(--ra-primary, #212529);
-  border-color: var(--ra-primary, #212529);
-  color: var(--ra-text, #fff);
+  background-color: var(--ra-primary-dark);
+  border-color: var(--ra-primary-dark);
+  color: var(--ra-white);
 }
 
 /* Responsywność */
 @media (max-width: 991.98px) {
-  .checkout-summary {
-    position: static;
-  }
+  .checkout-summary { position: static; }
+  .section { padding: 70px 0; }
+  .hero { padding-top: 120px; min-height: auto; }
 }

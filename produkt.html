@@ -29,18 +29,19 @@
         </div>
       </div>
       <div class="col-md-6">
-        <span class="text-muted small text-uppercase">SKU: GRD-001</span>
+        <span class="text-muted small text-uppercase">SKU: GRD-001 | Kategoria: Akcesoria spacerowe</span>
         <h1 class="mb-2 mt-1 display-5 fw-bold">Szelki Guard Pro</h1>
         <div class="d-flex align-items-center mb-3">
           <div class="text-warning me-2">
             <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
           </div>
+          <a href="#opinie" class="text-muted small text-decoration-none">(12 opinii klientów)</a>
         </div>
         <div class="price-box mb-3 border-bottom pb-3">
           <span class="fs-2 fw-bold text-dark me-3">129,00 zł</span>
-          <span class="badge bg-success"><i class="bi bi-check-circle me-1"></i>W magazynie</span>
+          <span class="badge bg-success"><i class="bi bi-check-circle me-1"></i>W magazynie (wysyłka 24h)</span>
         </div>
-        <p class="mb-4">Niezawodne, bezuciskowe szelki typu guard. Zapewniają psu maksymalną swobodę ruchów, chroniąc układ kostny.</p>
+        <p class="mb-4">Niezawodne, bezuciskowe szelki typu guard. Zapewniają psu maksymalną swobodę ruchów, chroniąc układ kostny przed przeciążeniami podczas spacerów.</p>
         <form action="koszyk.html" class="mb-4">
           <div class="row g-3 mb-4">
             <div class="col-sm-6">
@@ -48,13 +49,14 @@
               <select class="form-select" id="rozmiar">
                 <option selected>S (obwód 40-55 cm)</option>
                 <option>M (obwód 50-70 cm)</option>
+                <option>L (obwód 70-95 cm)</option>
               </select>
             </div>
             <div class="col-sm-6">
               <label for="kolor" class="form-label fw-bold">Wybierz kolor</label>
               <select class="form-select" id="kolor">
                 <option selected>Leśna zieleń</option>
-                <option>Czerń</option>
+                <option>Głęboka czerń</option>
               </select>
             </div>
           </div>
@@ -68,26 +70,75 @@
         </form>
       </div>
     </div>
-    
+   
+    <!-- Zakładki informacyjne -->
     <div class="row mb-5">
       <div class="col-12">
         <ul class="nav nav-tabs mb-4" id="produktTab" role="tablist">
           <li class="nav-item" role="presentation"><button class="nav-link active fw-bold text-dark" id="opis-tab" data-bs-toggle="tab" data-bs-target="#opis" type="button" role="tab">Pełny opis</button></li>
           <li class="nav-item" role="presentation"><button class="nav-link fw-bold text-dark" id="spec-tab" data-bs-toggle="tab" data-bs-target="#spec" type="button" role="tab">Specyfikacja techniczna</button></li>
+          <li class="nav-item" role="presentation"><button class="nav-link fw-bold text-dark" id="opinie-tab" data-bs-toggle="tab" data-bs-target="#opinie" type="button" role="tab">Opinie klientów (12)</button></li>
         </ul>
         <div class="tab-content" id="produktTabContent">
           <div class="tab-pane fade show active" id="opis" role="tabpanel">
-            <p>Szelki Guard Pro to flagowy produkt w naszym sklepie. Zostały zaprojektowane we współpracy z psimi fizjoterapeutami.</p>
+            <p>Szelki Guard Pro to flagowy produkt w naszym sklepie. Zostały zaprojektowane we współpracy z psimi fizjoterapeutami, by upewnić się, że nie blokują ruchów łopatek psa.</p>
           </div>
           <div class="tab-pane fade" id="spec" role="tabpanel">
-            <ul class="list-group list-group-flush w-50">
-              <li class="list-group-item"><strong>Materiał:</strong> Wytrzymała taśma nośna z recyklingu, podszycie z miękkiego neoprenu.</li>
+            <ul class="list-group list-group-flush w-md-50">
+              <li class="list-group-item"><strong>Materiał główny:</strong> Wytrzymała taśma z recyklingu RPET (100%).</li>
+              <li class="list-group-item"><strong>Podszycie:</strong> Miękki neopren antyodparzeniowy.</li>
               <li class="list-group-item"><strong>Okucia:</strong> Spawane, nierdzewne D-ringi.</li>
+              <li class="list-group-item"><strong>Zapięcie:</strong> Dwie certyfikowane klamry typu mrozoodpornego.</li>
             </ul>
+          </div>
+          <div class="tab-pane fade" id="opinie" role="tabpanel">
+            <div class="mb-4 pb-3 border-bottom">
+              <h5 class="h6">Anna W. <span class="text-warning ms-2"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span></h5>
+              <p class="text-muted small">Szelki są rewelacyjne! Mój pies bardzo je lubi, łatwo się je zakłada (nie trzeba przekładać przez głowę).</p>
+            </div>
+            <button class="btn btn-outline-dark btn-sm">Dodaj swoją opinię</button>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- Rekomendacje -->
+    <section class="mt-5 pt-4 border-top">
+      <h3 class="mb-4 h4 text-center">Mogą Cię również zainteresować</h3>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <article class="card h-100 product-card">
+            <div class="product-img-wrapper"><img src="assets/dog-1.jpg" class="card-img-top" alt="Smycz"></div>
+            <div class="card-body text-center">
+              <h4 class="card-title h6">Smycz miejska 1.5m</h4>
+              <div class="current-price mb-3">49,00 zł</div>
+              <a href="produkt.html" class="btn btn-outline-dark w-100 mt-auto">Zobacz</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="card h-100 product-card">
+            <div class="product-img-wrapper"><img src="assets/dog-6.jpg" class="card-img-top" alt="Smycz 3m"></div>
+            <div class="card-body text-center">
+              <h4 class="card-title h6">Smycz przepinana 3m</h4>
+              <div class="current-price mb-3">65,00 zł</div>
+              <a href="produkt.html" class="btn btn-outline-dark w-100 mt-auto">Zobacz</a>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="card h-100 product-card">
+            <div class="product-img-wrapper"><img src="assets/dog-2.jpg" class="card-img-top" alt="Kong"></div>
+            <div class="card-body text-center">
+              <h4 class="card-title h6">Kong Classic (L)</h4>
+              <div class="current-price mb-3 text-danger">46,75 zł</div>
+              <a href="produkt.html" class="btn btn-outline-dark w-100 mt-auto">Zobacz</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
   </main>
   <div id="site-footer"></div>
   <script src="js/layout.js"></script>

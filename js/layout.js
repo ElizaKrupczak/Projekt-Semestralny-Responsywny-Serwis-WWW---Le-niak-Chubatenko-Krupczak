@@ -8,9 +8,11 @@
         Reksie <span class="brand-amp">i</span> Azorki
       </a>
       <div class="d-flex align-items-center order-lg-3 ms-auto gap-3">
-        <a href="konto.html" class="text-reset" aria-label="Konto użytkownika"><i class="bi bi-person-circle fs-5"></i></a>
-        <a href="koszyk.html" class="text-reset position-relative me-2 me-lg-0" aria-label="Koszyk zakupowy">
-          <i class="bi bi-cart3 fs-5"></i>
+        <a href="konto.html" class="text-reset nav-icon-link" aria-label="Konto użytkownika" title="Moje konto">
+          <i class="bi bi-person-circle fs-4"></i>
+        </a>
+        <a href="koszyk.html" class="text-reset position-relative me-2 me-lg-0 nav-icon-link" aria-label="Koszyk zakupowy" title="Koszyk">
+          <i class="bi bi-cart3 fs-4"></i>
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">2<span class="visually-hidden">produkty w koszyku</span></span>
         </a>
         <button aria-controls="navMenu" aria-expanded="false" aria-label="Pokaż lub ukryj menu" class="navbar-toggler ms-2" data-bs-target="#navMenu" data-bs-toggle="collapse" type="button">
@@ -56,12 +58,14 @@
     if (f) f.outerHTML = footer;
 
     var page = location.pathname.split("/").pop() || "index.html";
+    
+    // Aktywacja zakładek w nawigacji
     if (page === "blog.html" || page === "single.html") {
       var blog = document.querySelector('#mainNav a[href="blog.html"]');
-      if (blog) {
-        blog.classList.add("active");
-        blog.setAttribute("aria-current", "page");
-      }
+      if (blog) { blog.classList.add("active"); blog.setAttribute("aria-current", "page"); }
+    } else if (page.includes("sklep") || page === "produkt.html" || page === "koszyk.html" || page === "zamowienie.html") {
+      var sklep = document.querySelector('#mainNav a[href="sklep.html"]');
+      if (sklep) { sklep.classList.add("active"); sklep.setAttribute("aria-current", "page"); }
     }
   }
 
@@ -71,7 +75,6 @@
     render();
   }
 
-  // Funkcje do działania nawigacji (rozwijanie/zwijanie) i aktualizacji roku
   setTimeout(() => {
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -79,7 +82,7 @@
     const nav = document.getElementById('mainNav');
     if(nav) {
       const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
-      window.addEventListener('scroll', onScroll); 
+      window.addEventListener('scroll', onScroll);
       onScroll();
     }
   }, 100);
