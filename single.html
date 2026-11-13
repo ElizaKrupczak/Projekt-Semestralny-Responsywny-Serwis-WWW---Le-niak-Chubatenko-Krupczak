@@ -1,76 +1,88 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Spokojny spacer: jak nauczyć psa luźnej smyczy? | Reksie i Azorki</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DynaPuff:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
-</head>
-<body class="bg-light">
-  <div id="site-header"></div>
-  
-  <main class="container article-layout bg-white shadow-sm mt-5 mb-5 rounded border">
-    <div class="row justify-content-center">
-      <div class="col-lg-10 col-xl-8 p-md-4">
-        
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="index.html">Strona główna</a></li>
-            <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Wychowanie</li>
-          </ol>
-        </nav>
-
-        <header class="article-header text-center mb-5">
-          <span class="badge category-badge mb-3">Wychowanie</span>
-          <h1 class="mb-3">Spokojny spacer: jak nauczyć psa luźnej smyczy?</h1>
-          <div class="article-meta justify-content-center">
-            <span><i class="bi bi-calendar3 me-1"></i> 6 listopada 2026</span>
-            <span><i class="bi bi-clock me-1"></i> Czas czytania: 5 min</span>
-          </div>
-        </header>
-
-        <img src="assets/dog-1.jpg" alt="Dwa psy na spacerze" class="article-image img-fluid mb-5 shadow-sm">
-
-        <div class="article-body">
-          <p class="lead">Spacer może być przyjemnością dla obu końców smyczy. Każdy opiekun psa zna to uczucie, gdy pupil postanawia wyrwać ramię ze stawu na widok wiewiórki. Poznaj proste ćwiczenia, które pomagają psu spokojnie odkrywać otoczenie.</p>
-          
-          <h2>Dlaczego psy ciągną na smyczy?</h2>
-          <p>Przede wszystkim musimy zrozumieć, że dla psa naturalnym tempem poruszania się jest kłus. Ludzie chodzą znacznie wolniej. Dodatkowo otaczający świat pełen jest fascynujących zapachów, do których pies chce dotrzeć jak najszybciej. Z jego perspektywy ciągnięcie to po prostu efektywny sposób na szybsze dostanie się do celu.</p>
-
-          <blockquote class="blockquote">
-            <p>"Kluczem do sukcesu nie jest siłowanie się z psem, ale pokazanie mu, że bycie blisko opiekuna jest po prostu opłacalne."</p>
-          </blockquote>
-
-          <h2>Technika "Drzewa"</h2>
-          <p>Najprostszą i najbardziej znaną metodą jest tzw. technika drzewa. Kiedy tylko poczujesz napięcie na smyczy - zatrzymaj się. Nie krzycz, nie szarp. Po prostu zapuść korzenie i czekaj. Rusz z miejsca dopiero, gdy pies poluzuje napięcie i spojrzy na Ciebie.</p>
-          <ul>
-            <li>Bądź konsekwentny – zatrzymuj się <strong>zawsze</strong>.</li>
-            <li>Nagradzaj kontakt wzrokowy.</li>
-            <li>Używaj wygodnych, bezuciskowych szelek typu guard (takich jak w <a href="sklep.html">naszym sklepie</a>).</li>
-          </ul>
-
-          <h2>Spacer to nie maraton</h2>
-          <p>Zadbaj o to, by spacer był czasem dla psa, a nie tylko realizacją Twojej trasy. Pozwól mu węszyć! Węszenie obniża tętno psa, relaksuje go i męczy intelektualnie o wiele bardziej niż zwykłe bieganie.</p>
-        </div>
-
-        <div class="author-box border-top mt-5 pt-4">
-          <img src="assets/dog-5.jpg" alt="Anna - autorka bloga">
-          <div>
-            <h3>Anna Kowalska</h3>
-            <p class="text-muted mb-0">Pasjonatka psiej komunikacji i behawiorystka. Od 5 lat pomaga opiekunom lepiej rozumieć ich czworonożnych przyjaciół.</p>
-          </div>
-        </div>
-
+(function () {
+  var header = `
+<header>
+  <nav aria-label="Nawigacja główna" class="navbar navbar-expand-lg fixed-top site-nav" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand brand" href="index.html#hero">
+        <i aria-hidden="true" class="bi bi-heart-pulse-fill brand-icon"></i>
+        Reksie <span class="brand-amp">i</span> Azorki
+      </a>
+      <div class="d-flex align-items-center order-lg-3 ms-auto gap-3">
+        <a href="konto.html" class="text-reset nav-icon-link" aria-label="Konto użytkownika" title="Moje konto">
+          <i class="bi bi-person-circle fs-4"></i>
+        </a>
+        <a href="koszyk.html" class="text-reset position-relative me-2 me-lg-0 nav-icon-link" aria-label="Koszyk zakupowy" title="Koszyk">
+          <i class="bi bi-cart3 fs-4"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">2<span class="visually-hidden">produkty w koszyku</span></span>
+        </a>
+        <button aria-controls="navMenu" aria-expanded="false" aria-label="Pokaż lub ukryj menu" class="navbar-toggler ms-2" data-bs-target="#navMenu" data-bs-toggle="collapse" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse order-lg-2" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 pe-lg-4">
+          <li class="nav-item"><a class="nav-link" href="index.html#o-nas">O nas</a></li>
+          <li class="nav-item"><a class="nav-link" href="sklep.html">Sklep</a></li>
+          <li class="nav-item"><a class="nav-link nav-link--blog" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#kontakt">Kontakt</a></li>
+        </ul>
       </div>
     </div>
-  </main>
+  </nav>
+</header>`;
 
-  <div id="site-footer"></div>
-  <script src="js/layout.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+  var footer = `
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4 align-items-start">
+      <div class="col-md-6">
+        <a class="brand brand--footer" href="index.html#hero">Reksie <span class="brand-amp">i</span> Azorki</a>
+        <p class="mt-2 mb-0">Reksie i Azorki sp. z o.o.<br>ul. Psia 12, 00-001 Warszawa<br>NIP: 123-456-78-90 • REGON: 123456789</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <nav aria-label="Nawigacja w stopce">
+          <a href="index.html#o-nas">O nas</a> · <a href="sklep.html">Sklep</a> · <a href="index.html#kontakt">Kontakt</a> · <a href="blog.html">Blog</a>
+        </nav>
+        <a class="back-top mt-3" href="index.html#hero"><i aria-hidden="true" class="bi bi-arrow-up"></i> Do góry</a>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright mb-0">© <span id="year">${new Date().getFullYear()}</span> Reksie i Azorki. Wszelkie prawa zastrzeżone.</p>
+  </div>
+</footer>`;
+
+  function render() {
+    var h = document.getElementById("site-header");
+    var f = document.getElementById("site-footer");
+    if (h) h.outerHTML = header;
+    if (f) f.outerHTML = footer;
+
+    var page = location.pathname.split("/").pop() || "index.html";
+    
+    if (page === "blog.html" || page === "single.html") {
+      var blog = document.querySelector('#mainNav a[href="blog.html"]');
+      if (blog) { blog.classList.add("active"); blog.setAttribute("aria-current", "page"); }
+    } else if (page.includes("sklep") || page === "produkt.html" || page === "koszyk.html" || page === "zamowienie.html") {
+      var sklep = document.querySelector('#mainNav a[href="sklep.html"]');
+      if (sklep) { sklep.classList.add("active"); sklep.setAttribute("aria-current", "page"); }
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", render);
+  } else {
+    render();
+  }
+
+  setTimeout(() => {
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    const nav = document.getElementById('mainNav');
+    if(nav) {
+      const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+      window.addEventListener('scroll', onScroll);
+      onScroll();
+    }
+  }, 100);
+})();
