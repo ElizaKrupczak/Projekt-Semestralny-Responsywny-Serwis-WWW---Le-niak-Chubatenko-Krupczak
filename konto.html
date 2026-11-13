@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moje konto – Reksie i Azorki</title>
+<meta name="description" content="Panel klienta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=DynaPuff:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+<a class="skip-link" href="#tresc">Przejdź do treści</a>
+<div id="site-header"></div>
+<main id="tresc" class="shop-page">
+<div class="container">
+<nav aria-label="breadcrumb"><ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="index.html">Strona główna</a></li>
+<li class="breadcrumb-item active" aria-current="page">Moje konto</li>
+</ol></nav>
+<div class="alert alert-success d-flex align-items-center gap-2" role="alert"><i class="bi bi-check-circle-fill"></i> Dziękujemy! Twoje zamówienie nr RA-2026-1043 zostało przyjęte.</div>
+<div class="row g-4">
+<aside class="col-lg-3">
+<div class="list-group account-menu">
+<a href="#pulpit" class="list-group-item list-group-item-action active" aria-current="true"><i class="bi bi-speedometer2"></i> Pulpit</a>
+<a href="#zamowienia" class="list-group-item list-group-item-action"><i class="bi bi-bag"></i> Moje zamówienia</a>
+<a href="#adres" class="list-group-item list-group-item-action"><i class="bi bi-geo-alt"></i> Adresy dostawy</a>
+<a href="#" class="list-group-item list-group-item-action"><i class="bi bi-gear"></i> Ustawienia konta</a>
+<a href="index.html" class="list-group-item list-group-item-action text-danger"><i class="bi bi-box-arrow-right"></i> Wyloguj</a>
+</div>
+</aside>
+<div class="col-lg-9">
+<section id="pulpit" class="mb-5">
+<h1>Cześć, Anna! 🐾</h1>
+<p>Witaj w panelu klienta. Tutaj sprawdzisz swoje zamówienia i dane.</p>
+<div class="row g-3">
+<div class="col-sm-4"><div class="card stat-card p-3"><span>Zamówienia</span><strong>5</strong></div></div>
+<div class="col-sm-4"><div class="card stat-card p-3"><span>W realizacji</span><strong>1</strong></div></div>
+<div class="col-sm-4"><div class="card stat-card p-3"><span>Punkty Psiaka</span><strong>320</strong></div></div>
+</div>
+<p class="mt-3 mb-1">Do kolejnego rabatu brakuje Ci 80 punktów:</p>
+<div class="progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar progress-brand" style="width: 80%">80%</div></div>
+</section>
+<section id="zamowienia" class="mb-5">
+<h2>Historia zamówień</h2>
+<div class="table-responsive"><table class="table align-middle">
+<thead><tr><th scope="col">Nr zamówienia</th><th scope="col">Data</th><th scope="col">Kwota</th><th scope="col">Status</th><th scope="col"></th></tr></thead>
+<tbody>
+<tr><td>RA-2026-1043</td><td>13.11.2026</td><td>213,97 zł</td><td><span class="badge text-bg-warning">W realizacji</span></td><td><a href="#">Szczegóły</a></td></tr>
+<tr><td>RA-2026-0987</td><td>28.10.2026</td><td>79,90 zł</td><td><span class="badge text-bg-success">Wysłane</span></td><td><a href="#">Szczegóły</a></td></tr>
+<tr><td>RA-2026-0812</td><td>02.09.2026</td><td>259,00 zł</td><td><span class="badge text-bg-success">Wysłane</span></td><td><a href="#">Szczegóły</a></td></tr>
+</tbody></table></div>
+</section>
+<section id="adres">
+<h2>Domyślny adres wysyłki</h2>
+<div class="card p-4">
+<address class="mb-3">Anna Kowalska<br>ul. Psia 5/12<br>00-001 Warszawa<br>tel. 600 100 200</address>
+<a href="#" class="btn btn-outline-secondary btn-sm align-self-start"><i class="bi bi-pencil"></i> Edytuj adres</a>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+<div id="site-footer"></div>
+<script src="js/layout.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
