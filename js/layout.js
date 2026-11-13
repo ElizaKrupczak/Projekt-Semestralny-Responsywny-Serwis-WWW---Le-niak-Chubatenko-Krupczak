@@ -70,4 +70,17 @@
   } else {
     render();
   }
+
+  // Funkcje do działania nawigacji (rozwijanie/zwijanie) i aktualizacji roku
+  setTimeout(() => {
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    const nav = document.getElementById('mainNav');
+    if(nav) {
+      const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+      window.addEventListener('scroll', onScroll); 
+      onScroll();
+    }
+  }, 100);
 })();
