@@ -1,76 +1,139 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zamówienie – Reksie i Azorki</title>
-<meta name="description" content="Realizacja zamówienia.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=DynaPuff:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-<link href="style.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kasa i płatność | Reksie i Azorki</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DynaPuff:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
-<body>
-<a class="skip-link" href="#tresc">Przejdź do treści</a>
-<div id="site-header"></div>
-<main id="tresc" class="shop-page">
-<div class="container">
-<nav aria-label="breadcrumb"><ol class="breadcrumb">
-<li class="breadcrumb-item"><a href="index.html">Strona główna</a></li>
-<li class="breadcrumb-item"><a href="koszyk.html">Koszyk</a></li>
-<li class="breadcrumb-item active" aria-current="page">Zamówienie</li>
-</ol></nav>
-<h1 class="mb-4">Kasa</h1>
-<form action="konto.html" class="row g-4">
-<div class="col-lg-8">
-<fieldset class="card p-4 mb-4"><legend class="h4">1. Dane i adres dostawy</legend>
-<div class="row g-3">
-<div class="col-md-6"><label for="imie" class="form-label">Imię</label><input type="text" class="form-control" id="imie" required></div>
-<div class="col-md-6"><label for="nazwisko" class="form-label">Nazwisko</label><input type="text" class="form-control" id="nazwisko" required></div>
-<div class="col-12"><label for="ulica" class="form-label">Ulica i numer</label><input type="text" class="form-control" id="ulica" required></div>
-<div class="col-md-4"><label for="kod" class="form-label">Kod pocztowy</label><input type="text" class="form-control" id="kod" required></div>
-<div class="col-md-8"><label for="miasto" class="form-label">Miasto</label><input type="text" class="form-control" id="miasto" required></div>
-<div class="col-md-6"><label for="tel" class="form-label">Telefon</label><input type="tel" class="form-control" id="tel" required></div>
-<div class="col-md-6"><label for="email" class="form-label">E-mail</label><input type="email" class="form-control" id="email" required></div>
-</div>
-<div class="form-check mt-3"><input class="form-check-input" type="checkbox" id="faktura" data-bs-toggle="collapse" data-bs-target="#firma" aria-controls="firma"><label class="form-check-label" for="faktura">Chcę otrzymać fakturę na firmę</label></div>
-<div class="collapse" id="firma"><div class="row g-3 mt-1">
-<div class="col-md-6"><label for="nip" class="form-label">NIP</label><input type="text" class="form-control" id="nip"></div>
-<div class="col-md-6"><label for="firmaN" class="form-label">Nazwa firmy</label><input type="text" class="form-control" id="firmaN"></div>
-</div></div>
-</fieldset>
-<fieldset class="card p-4 mb-4"><legend class="h4">2. Dostawa</legend>
-<div class="form-check option-box"><input class="form-check-input" type="radio" name="dost" id="dost1" checked><label class="form-check-label d-flex justify-content-between w-100" for="dost1"><span><i class="bi bi-truck"></i> Kurier</span><span class="text-muted">14,99 zł</span></label></div>
-<div class="form-check option-box"><input class="form-check-input" type="radio" name="dost" id="dost2"><label class="form-check-label d-flex justify-content-between w-100" for="dost2"><span><i class="bi bi-box-seam"></i> Paczkomat</span><span class="text-muted">11,99 zł</span></label></div>
-<div class="form-check option-box"><input class="form-check-input" type="radio" name="dost" id="dost3"><label class="form-check-label d-flex justify-content-between w-100" for="dost3"><span><i class="bi bi-shop"></i> Odbiór osobisty</span><span class="text-muted">0,00 zł</span></label></div>
-</fieldset>
-<fieldset class="card p-4"><legend class="h4">3. Płatność</legend>
-<div class="form-check option-box"><input class="form-check-input" type="radio" name="plat" id="plat1" checked><label class="form-check-label d-flex justify-content-between w-100" for="plat1"><span><i class="bi bi-phone"></i> BLIK</span><span class="text-muted"></span></label></div>
-<div class="form-check option-box"><input class="form-check-input" type="radio" name="plat" id="plat2"><label class="form-check-label d-flex justify-content-between w-100" for="plat2"><span><i class="bi bi-credit-card"></i> Karta płatnicza</span><span class="text-muted"></span></label></div>
-<div class="form-check option-box"><input class="form-check-input" type="radio" name="plat" id="plat3"><label class="form-check-label d-flex justify-content-between w-100" for="plat3"><span><i class="bi bi-lightning-charge"></i> Szybki przelew</span><span class="text-muted"></span></label></div>
-</fieldset>
-</div>
-<div class="col-lg-4">
-<div class="card summary-card p-4">
-<h2 class="h4">Twoje zamówienie</h2>
-<ul class="list-unstyled summary-list">
-<li><span>Szelki Comfort Walk × 1</span><span>119,00 zł</span></li>
-<li><span>Gryzak linowy XL × 2</span><span>79,98 zł</span></li>
-<li><span>Dostawa: Kurier</span><span>14,99 zł</span></li>
-<li class="summary-total"><span>Do zapłaty</span><span>213,97 zł</span></li>
-</ul>
-<div class="form-check"><input class="form-check-input" type="checkbox" id="reg" required><label class="form-check-label" for="reg">Akceptuję <a href="#">regulamin</a> sklepu *</label></div>
-<div class="form-check mb-3"><input class="form-check-input" type="checkbox" id="rodo" required><label class="form-check-label" for="rodo">Zapoznałem/am się z <a href="#">polityką prywatności</a> *</label></div>
-<a href="konto.html?zamowienie=ok" class="btn btn-brand btn-lg w-100"><i class="bi bi-bag-check"></i> Kupuję i płacę</a>
-</div>
-</div>
-</form>
-</div>
-</main>
-<div id="site-footer"></div>
-<script src="js/layout.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<body class="page-padding-top bg-light">
+  <div id="site-header"></div>
+  <main class="container py-4">
+    <div class="row pb-5 mt-3">
+      <div class="col-12 mb-4">
+        <h1>Finalizacja zamówienia</h1>
+      </div>
+      <div class="col-lg-8 mb-5 mb-lg-0">
+        <form>
+          <div class="bg-white p-4 p-md-5 rounded shadow-sm border mb-4">
+            <h3 class="h5 border-bottom pb-3 mb-4">1. Dane bilingowe i adres dostawy</h3>
+            <div class="row g-3">
+              <div class="col-sm-6"><label class="form-label">Imię</label><input type="text" class="form-control" required></div>
+              <div class="col-sm-6"><label class="form-label">Nazwisko</label><input type="text" class="form-control" required></div>
+              <div class="col-12"><label class="form-label">Ulica i numer</label><input type="text" class="form-control" required></div>
+              <div class="col-sm-4"><label class="form-label">Kod pocztowy</label><input type="text" class="form-control" placeholder="00-000" required></div>
+              <div class="col-sm-8"><label class="form-label">Miasto</label><input type="text" class="form-control" required></div>
+              <div class="col-sm-6"><label class="form-label">Telefon</label><input type="tel" class="form-control" required></div>
+              <div class="col-sm-6"><label class="form-label">E-mail</label><input type="email" class="form-control" required></div>
+            </div>
+            <div class="form-check mt-4">
+              <input class="form-check-input" type="checkbox" id="fakturaCheck" data-bs-toggle="collapse" data-bs-target="#fakturaFields">
+              <label class="form-check-label fw-bold" for="fakturaCheck">Chcę otrzymać fakturę na firmę</label>
+            </div>
+            <div class="collapse mt-3" id="fakturaFields">
+              <div class="row g-3 bg-light p-3 rounded border">
+                <div class="col-sm-4"><label class="form-label">NIP</label><input type="text" class="form-control"></div>
+                <div class="col-sm-8"><label class="form-label">Nazwa firmy</label><input type="text" class="form-control"></div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-4 p-md-5 rounded shadow-sm border mb-4">
+            <h3 class="h5 border-bottom pb-3 mb-4">2. Metoda dostawy</h3>
+            <div class="list-group">
+              <label class="list-group-item d-flex gap-3 p-3">
+                <input class="form-check-input flex-shrink-0" type="radio" name="delivery" value="paczkomat" checked>
+                <span class="d-block w-100 d-flex justify-content-between">
+                  <span><strong>Paczkomat InPost</strong><br><small class="text-muted">Odbiór w 1-2 dni robocze</small></span>
+                  <span class="fw-bold">14,90 zł</span>
+                </span>
+              </label>
+              <label class="list-group-item d-flex gap-3 p-3">
+                <input class="form-check-input flex-shrink-0" type="radio" name="delivery" value="kurier">
+                <span class="d-block w-100 d-flex justify-content-between">
+                  <span><strong>Kurier DPD</strong><br><small class="text-muted">Dostawa prosto pod drzwi</small></span>
+                  <span class="fw-bold">18,50 zł</span>
+                </span>
+              </label>
+              <label class="list-group-item d-flex gap-3 p-3">
+                <input class="form-check-input flex-shrink-0" type="radio" name="delivery" value="odbiór">
+                <span class="d-block w-100 d-flex justify-content-between">
+                  <span><strong>Odbiór osobisty</strong><br><small class="text-muted">Ul. Psia 12, Warszawa</small></span>
+                  <span class="fw-bold">0,00 zł</span>
+                </span>
+              </label>
+            </div>
+          </div>
+          <div class="bg-white p-4 p-md-5 rounded shadow-sm border mb-4">
+            <h3 class="h5 border-bottom pb-3 mb-4">3. Metoda płatności</h3>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="radio" name="payment" id="pay1" checked>
+              <label class="form-check-label d-flex align-items-center" for="pay1"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Blik_logo.svg" alt="BLIK" height="20" class="me-2"> Szybka płatność BLIK</label>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="radio" name="payment" id="pay2">
+              <label class="form-check-label" for="pay2"><i class="bi bi-credit-card me-2"></i>Karta płatnicza (Visa, Mastercard)</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="payment" id="pay3">
+              <label class="form-check-label" for="pay3"><i class="bi bi-bank me-2"></i>Szybki przelew online (Przelewy24)</label>
+            </div>
+          </div>
+          <div class="bg-white p-4 p-md-5 rounded shadow-sm border">
+            <div class="form-check mb-2">
+              <input class="form-check-input" type="checkbox" id="regulamin" required>
+              <label class="form-check-label small" for="regulamin">Oświadczam, że akceptuję <a href="#">Regulamin sklepu</a> oraz zapoznałem/am się z <a href="#">Polityką Prywatności</a>. *</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="newsletter">
+              <label class="form-check-label small" for="newsletter">Zapisz mnie do psiego newslettera (promocje i poradniki).</label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-4">
+        <div class="card border shadow-sm checkout-summary">
+          <div class="card-header bg-dark text-white py-3">
+            <h4 class="card-title h6 mb-0">Twoje zamówienie</h4>
+          </div>
+          <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-secondary rounded-circle px-2 py-1">1</span>
+                <span class="small fw-medium">Szelki Guard Pro (M)</span>
+              </div>
+              <span class="small">129,00 zł</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
+              <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-secondary rounded-circle px-2 py-1">2</span>
+                <span class="small fw-medium">Mata węchowa „Las”</span>
+              </div>
+              <span class="small">142,40 zł</span>
+            </div>
+            <div class="d-flex justify-content-between mb-2 text-muted small">
+              <span>Wartość koszyka</span>
+              <span>271,40 zł</span>
+            </div>
+            <div class="d-flex justify-content-between mb-3 text-muted small border-bottom pb-3">
+              <span>Dostawa (Paczkomat)</span>
+              <span>14,90 zł</span>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-4 text-dark">
+              <span class="fs-5 fw-bold">Do zapłaty</span>
+              <span class="fs-4 fw-bold">286,30 zł</span>
+            </div>
+            <a href="konto.html" class="btn btn-brand btn-lg w-100"><i class="bi bi-lock-fill me-2"></i>Kupuję i płacę</a>
+            <p class="text-center text-muted small mt-3 mb-0"><i class="bi bi-shield-lock"></i> Bezpieczne zakupy SSL</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/layout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

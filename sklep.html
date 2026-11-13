@@ -1,195 +1,89 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sklep – Reksie i Azorki</title>
-<meta name="description" content="Sklep z akcesoriami dla psów.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=DynaPuff:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-<link href="style.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sklep dla psów | Reksie i Azorki</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DynaPuff:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
 </head>
-<body>
-<a class="skip-link" href="#tresc">Przejdź do treści</a>
-<div id="site-header"></div>
-<main id="tresc" class="shop-page">
-<div class="container">
-<nav aria-label="breadcrumb"><ol class="breadcrumb">
-<li class="breadcrumb-item"><a href="index.html">Strona główna</a></li>
-<li class="breadcrumb-item active" aria-current="page">Sklep</li>
-</ol></nav>
-<h1 class="mb-4">Sklep dla psiaków</h1>
-<div class="row g-4">
-<aside class="col-lg-3">
-<form class="filters card p-4" action="sklep.html">
-<h2 class="h5"><i class="bi bi-funnel"></i> Filtry</h2>
-<fieldset class="mb-4"><legend class="filter-title">Kategorie</legend>
-<div class="form-check"><input class="form-check-input" type="checkbox" id="k0" checked><label class="form-check-label" for="k0">Zabawki</label></div>
-<div class="form-check"><input class="form-check-input" type="checkbox" id="k1"><label class="form-check-label" for="k1">Legowiska</label></div>
-<div class="form-check"><input class="form-check-input" type="checkbox" id="k2"><label class="form-check-label" for="k2">Smycze i szelki</label></div>
-<div class="form-check"><input class="form-check-input" type="checkbox" id="k3"><label class="form-check-label" for="k3">Miski</label></div>
-<div class="form-check"><input class="form-check-input" type="checkbox" id="k4"><label class="form-check-label" for="k4">Przysmaki</label></div>
-<div class="form-check"><input class="form-check-input" type="checkbox" id="k5"><label class="form-check-label" for="k5">Pielęgnacja</label></div>
-</fieldset>
-<fieldset class="mb-4"><legend class="filter-title">Cena</legend>
-<label for="cena" class="form-label">Maksymalnie: 300 zł</label>
-<input type="range" class="form-range" id="cena" min="0" max="300" step="10" value="300">
-<div class="row g-2"><div class="col"><input type="number" class="form-control form-control-sm" placeholder="od" aria-label="Cena od"></div><div class="col"><input type="number" class="form-control form-control-sm" placeholder="do" aria-label="Cena do"></div></div>
-</fieldset>
-<fieldset class="mb-4"><legend class="filter-title">Rozmiar psa</legend>
-<div class="d-flex flex-wrap gap-2"><input type="checkbox" class="btn-check" id="sS" autocomplete="off"><label class="btn btn-outline-secondary btn-sm" for="sS">S</label>
-<input type="checkbox" class="btn-check" id="sM" autocomplete="off"><label class="btn btn-outline-secondary btn-sm" for="sM">M</label>
-<input type="checkbox" class="btn-check" id="sL" autocomplete="off"><label class="btn btn-outline-secondary btn-sm" for="sL">L</label>
-<input type="checkbox" class="btn-check" id="sXL" autocomplete="off"><label class="btn btn-outline-secondary btn-sm" for="sXL">XL</label>
-</div></fieldset>
-<fieldset class="mb-4"><legend class="filter-title">Dostępność</legend>
-<div class="form-check"><input class="form-check-input" type="checkbox" id="dost"><label class="form-check-label" for="dost">Tylko dostępne</label></div>
-<div class="form-check"><input class="form-check-input" type="checkbox" id="prom"><label class="form-check-label" for="prom">Tylko promocje</label></div>
-</fieldset>
-<button type="reset" class="btn btn-outline-secondary w-100"><i class="bi bi-arrow-counterclockwise"></i> Resetuj filtry</button>
-</form>
-</aside>
-<section class="col-lg-9" aria-label="Lista produktów">
-<div class="shop-toolbar d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
-<p class="mb-0">Znaleziono <strong>9</strong> produktów</p>
-<div class="d-flex align-items-center gap-2"><label for="sort" class="text-nowrap">Sortuj:</label>
-<select id="sort" class="form-select form-select-sm"><option>Popularność</option><option>Cena: od najniższej</option><option>Cena: od najwyższej</option><option>Nazwa: A–Z</option></select></div>
-</div>
-<div class="row g-4">
-<div class="col-sm-6 col-xl-4">
-<article class="card product-card h-100">
-<span class="badge product-badge">Promocja</span>
-<a href="produkt.html" tabindex="-1" aria-hidden="true"><img src="assets/dog-1.jpg" class="card-img-top" alt="Gryzak linowy XL" loading="lazy" width="800" height="540"></a>
-<div class="card-body d-flex flex-column">
-<span class="product-cat">Zabawki</span>
-<h3 class="card-title h5"><a href="produkt.html">Gryzak linowy XL</a></h3>
-<span class="stars" aria-label="Ocena 4.5 na 5"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
-<p class="my-2"><span class="price">39,99 zł</span> <del class="price-old">49,99 zł</del></p>
-<a href="produkt.html" class="btn btn-brand btn-sm mt-auto">Zobacz szczegóły</a>
-</div>
-</article>
-</div>
-<div class="col-sm-6 col-xl-4">
-<article class="card product-card h-100">
-<span class="badge product-badge">Nowość</span>
-<a href="produkt.html" tabindex="-1" aria-hidden="true"><img src="assets/dog-2.jpg" class="card-img-top" alt="Piłka węchowa Sniffy" loading="lazy" width="800" height="540"></a>
-<div class="card-body d-flex flex-column">
-<span class="product-cat">Zabawki</span>
-<h3 class="card-title h5"><a href="produkt.html">Piłka węchowa Sniffy</a></h3>
-<span class="stars" aria-label="Ocena 5 na 5"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
-<p class="my-2"><span class="price">29,99 zł</span></p>
-<a href="produkt.html" class="btn btn-brand btn-sm mt-auto">Zobacz szczegóły</a>
-</div>
-</article>
-</div>
-<div class="col-sm-6 col-xl-4">
-<article class="card product-card h-100">
-<span class="badge product-badge">-15%</span>
-<a href="produkt.html" tabindex="-1" aria-hidden="true"><img src="assets/dog-3.jpg" class="card-img-top" alt="Legowisko ortopedyczne" loading="lazy" width="800" height="540"></a>
-<div class="card-body d-flex flex-column">
-<span class="product-cat">Legowiska</span>
-<h3 class="card-title h5"><a href="produkt.html">Legowisko ortopedyczne</a></h3>
-<span class="stars" aria-label="Ocena 4.5 na 5"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
-<p class="my-2"><span class="price">219,00 zł</span> <del class="price-old">259,00 zł</del></p>
-<a href="produkt.html" class="btn btn-brand btn-sm mt-auto">Zobacz szczegóły</a>
-</div>
-</article>
-</div>
-<div class="col-sm-6 col-xl-4">
-<article class="card product-card h-100">
-<span class="badge product-badge">Bestseller</span>
-<a href="produkt.html" tabindex="-1" aria-hidden="true"><img src="assets/dog-4.jpg" class="card-img-top" alt="Smycz odblaskowa 2 m" loading="lazy" width="800" height="540"></a>
-<div class="card-body d-flex flex-column">
-<span class="product-cat">Smycze i szelki</span>
-<h3 class="card-title h5"><a href="produkt.html">Smycz odblaskowa 2 m</a></h3>
-<span class="stars" aria-label="Ocena 4 na 5"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span>
-<p class="my-2"><span class="price">59,90 zł</span></p>
-<a href="produkt.html" class="btn btn-brand btn-sm mt-auto">Zobacz szczegóły</a>
-</div>
-</article>
-</div>
-<div class="col-sm-6 col-xl-4">
-<article class="card product-card h-100">
-<span class="badge product-badge">Promocja</span>
-<a href="produkt.html" tabindex="-1" aria-hidden="true"><img src="assets/dog-5.jpg" class="card-img-top" alt="Szelki Comfort Walk" loading="lazy" width="800" height="540"></a>
-<div class="card-body d-flex flex-column">
-<span class="product-cat">Smycze i szelki</span>
-<h3 class="card-title h5"><a href="produkt.html">Szelki Comfort Walk</a></h3>
-<span class="stars" aria-label="Ocena 5 na 5"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
-<p class="my-2"><span class="price">119,00 zł</span> <del class="price-old">139,00 zł</del></p>
-<a href="produkt.html" class="btn btn-brand btn-sm mt-auto">Zobacz szczegóły</a>
-</div>
-</article>
-</div>
-<div class="col-sm-6 col-xl-4">
-<article class="card product-card h-100">
-<span class="badge product-badge">Eko</span>
-<a href="produkt.html" tabindex="-1" aria-hidden="true"><img src="assets/dog-6.jpg" class="card-img-top" alt="Mata węchowa Łąka" loading="lazy" width="800" height="540"></a>
-<div class="card-body d-flex flex-column">
-<span class="product-cat">Zabawki</span>
-<h3 class="card-title h5"><a href="produkt.html">Mata węchowa Łąka</a></h3>
-<span class="stars" aria-label="Ocena 4.5 na 5"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
-<p class="my-2"><span class="price">79,90 zł</span></p>
-<a href="produkt.html" class="btn btn-brand btn-sm mt-auto">Zobacz szczegóły</a>
-</div>
-</article>
-</div>
-<div class="col-sm-6 col-xl-4">
-<article class="card product-card h-100">
-<span class="badge product-badge">Nowość</span>
-<a href="produkt.html" tabindex="-1" aria-hidden="true"><img src="assets/dog-1.jpg" class="card-img-top" alt="Miska antypoślizgowa" loading="lazy" width="800" height="540"></a>
-<div class="card-body d-flex flex-column">
-<span class="product-cat">Miski</span>
-<h3 class="card-title h5"><a href="produkt.html">Miska antypoślizgowa</a></h3>
-<span class="stars" aria-label="Ocena 4 na 5"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i></span>
-<p class="my-2"><span class="price">34,90 zł</span></p>
-<a href="produkt.html" class="btn btn-brand btn-sm mt-auto">Zobacz szczegóły</a>
-</div>
-</article>
-</div>
-<div class="col-sm-6 col-xl-4">
-<article class="card product-card h-100">
-<span class="badge product-badge">-20%</span>
-<a href="produkt.html" tabindex="-1" aria-hidden="true"><img src="assets/dog-2.jpg" class="card-img-top" alt="Przysmaki treningowe 200 g" loading="lazy" width="800" height="540"></a>
-<div class="card-body d-flex flex-column">
-<span class="product-cat">Przysmaki</span>
-<h3 class="card-title h5"><a href="produkt.html">Przysmaki treningowe 200 g</a></h3>
-<span class="stars" aria-label="Ocena 5 na 5"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></span>
-<p class="my-2"><span class="price">19,90 zł</span> <del class="price-old">24,90 zł</del></p>
-<a href="produkt.html" class="btn btn-brand btn-sm mt-auto">Zobacz szczegóły</a>
-</div>
-</article>
-</div>
-<div class="col-sm-6 col-xl-4">
-<article class="card product-card h-100">
-<span class="badge product-badge">Polecane</span>
-<a href="produkt.html" tabindex="-1" aria-hidden="true"><img src="assets/dog-3.jpg" class="card-img-top" alt="Szczotka do sierści" loading="lazy" width="800" height="540"></a>
-<div class="card-body d-flex flex-column">
-<span class="product-cat">Pielęgnacja</span>
-<h3 class="card-title h5"><a href="produkt.html">Szczotka do sierści</a></h3>
-<span class="stars" aria-label="Ocena 4.5 na 5"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></span>
-<p class="my-2"><span class="price">44,90 zł</span></p>
-<a href="produkt.html" class="btn btn-brand btn-sm mt-auto">Zobacz szczegóły</a>
-</div>
-</article>
-</div>
-</div>
-<nav aria-label="Paginacja" class="mt-5"><ul class="pagination justify-content-center">
-<li class="page-item disabled"><a class="page-link" href="#">Poprzednia</a></li>
-<li class="page-item active" aria-current="page"><a class="page-link" href="sklep.html">1</a></li>
-<li class="page-item"><a class="page-link" href="sklep.html">2</a></li>
-<li class="page-item"><a class="page-link" href="sklep.html">3</a></li>
-<li class="page-item"><a class="page-link" href="sklep.html">Następna</a></li>
-</ul></nav>
-</section>
-</div>
-</div>
-</main>
-<div id="site-footer"></div>
-<script src="js/layout.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<body class="page-padding-top">
+  <div id="site-header"></div>
+  <main class="container py-4">
+    <nav aria-label="breadcrumb" class="mb-4">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Strona główna</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Sklep</li>
+      </ol>
+    </nav>
+    <div class="row pb-5">
+      <div class="col-12 mb-4">
+        <h1>Wyposażenie dla psa</h1>
+        <p class="text-muted">Wszystko, czego potrzebujesz na spacer, trening i do domowego wypoczynku.</p>
+      </div>
+      <aside class="col-lg-3 mb-5 mb-lg-0">
+        <div class="card border-0 shadow-sm p-4 sticky-top" style="top: 100px; z-index: 1;">
+          <h4 class="h5 mb-3">Filtruj asortyment</h4>
+          <hr class="mb-4">
+          <div class="mb-4">
+            <h5 class="h6 mb-2">Kategorie</h5>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="cat1" checked><label class="form-check-label" for="cat1">Akcesoria spacerowe</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="cat2"><label class="form-check-label" for="cat2">Zabawki węchowe</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="cat3"><label class="form-check-label" for="cat3">Legowiska</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="cat4"><label class="form-check-label" for="cat4">Karmy i przysmaki</label></div>
+          </div>
+          <div class="mb-4">
+            <h5 class="h6 mb-2">Cena (zł)</h5>
+            <input type="range" class="form-range" min="0" max="500" id="priceRange">
+            <div class="d-flex justify-content-between text-muted small">
+              <span>0 zł</span><span>do 500 zł</span>
+            </div>
+          </div>
+          <div class="mb-4">
+            <h5 class="h6 mb-2">Dostępność</h5>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="avail1" checked><label class="form-check-label" for="avail1">W magazynie</label></div>
+            <div class="form-check"><input class="form-check-input" type="checkbox" id="avail2"><label class="form-check-label" for="avail2">Wysyłka w 24h</label></div>
+          </div>
+          <button class="btn btn-outline-secondary w-100 btn-sm">Resetuj filtry</button>
+        </div>
+      </aside>
+      <main class="col-lg-9">
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center mb-4 pb-2 border-bottom">
+          <span class="text-muted mb-2 mb-sm-0">Znaleziono: <strong>24</strong> produkty</span>
+          <div class="d-flex align-items-center">
+            <label for="sortSelect" class="me-2 text-nowrap">Sortuj:</label>
+            <select class="form-select form-select-sm" id="sortSelect">
+              <option value="pop">Najpopularniejsze</option>
+              <option value="price-asc">Cena: rosnąco</option>
+              <option value="price-desc">Cena: malejąco</option>
+              <option value="name">Nazwa: A-Z</option>
+            </select>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-sm-6 col-xl-4"><article class="card h-100 product-card"><div class="product-img-wrapper"><span class="badge bg-danger product-badge">Bestseller</span><img src="assets/dog-1.jpg" class="card-img-top" alt="Smycz"></div><div class="card-body d-flex flex-column text-center"><h3 class="card-title h6 mb-1">Smycz miejska 1.5m</h3><div class="price-wrap mb-3 mt-auto"><span class="current-price">49,00 zł</span></div><a href="produkt.html" class="btn btn-outline-dark w-100 mt-auto">Zobacz szczegóły</a></div></article></div>
+          <div class="col-sm-6 col-xl-4"><article class="card h-100 product-card"><div class="product-img-wrapper"><span class="badge bg-warning text-dark product-badge">-15%</span><img src="assets/dog-2.jpg" class="card-img-top" alt="Zabawka"></div><div class="card-body d-flex flex-column text-center"><h3 class="card-title h6 mb-1">Kong Classic (L)</h3><div class="price-wrap mb-3 mt-auto"><span class="old-price">55,00 zł</span><span class="current-price text-danger">46,75 zł</span></div><a href="produkt.html" class="btn btn-outline-dark w-100 mt-auto">Zobacz szczegóły</a></div></article></div>
+          <div class="col-sm-6 col-xl-4"><article class="card h-100 product-card"><div class="product-img-wrapper"><img src="assets/dog-3.jpg" class="card-img-top" alt="Szelki"></div><div class="card-body d-flex flex-column text-center"><h3 class="card-title h6 mb-1">Szelki Guard Pro</h3><div class="price-wrap mb-3 mt-auto"><span class="current-price">129,00 zł</span></div><a href="produkt.html" class="btn btn-outline-dark w-100 mt-auto">Zobacz szczegóły</a></div></article></div>
+          <div class="col-sm-6 col-xl-4"><article class="card h-100 product-card"><div class="product-img-wrapper"><img src="assets/dog-4.jpg" class="card-img-top" alt="Szarpak"></div><div class="card-body d-flex flex-column text-center"><h3 class="card-title h6 mb-1">Szarpak mop</h3><div class="price-wrap mb-3 mt-auto"><span class="current-price">39,00 zł</span></div><a href="produkt.html" class="btn btn-outline-dark w-100 mt-auto">Zobacz szczegóły</a></div></article></div>
+          <div class="col-sm-6 col-xl-4"><article class="card h-100 product-card"><div class="product-img-wrapper"><span class="badge bg-dark product-badge">Wyprzedaż</span><img src="assets/dog-5.jpg" class="card-img-top" alt="Miska"></div><div class="card-body d-flex flex-column text-center"><h3 class="card-title h6 mb-1">Miska spowalniająca</h3><div class="price-wrap mb-3 mt-auto"><span class="old-price">60,00 zł</span><span class="current-price text-danger">30,00 zł</span></div><a href="produkt.html" class="btn btn-outline-dark w-100 mt-auto">Zobacz szczegóły</a></div></article></div>
+          <div class="col-sm-6 col-xl-4"><article class="card h-100 product-card"><div class="product-img-wrapper"><img src="assets/dog-6.jpg" class="card-img-top" alt="Legowisko"></div><div class="card-body d-flex flex-column text-center"><h3 class="card-title h6 mb-1">Legowisko ortopedyczne</h3><div class="price-wrap mb-3 mt-auto"><span class="current-price">299,00 zł</span></div><a href="produkt.html" class="btn btn-outline-dark w-100 mt-auto">Zobacz szczegóły</a></div></article></div>
+        </div>
+        <nav aria-label="Nawigacja po stronach produktów" class="mt-5 pt-3 border-top">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1">Poprzednia</a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Następna</a></li>
+          </ul>
+        </nav>
+      </main>
+    </div>
+  </main>
+  <div id="site-footer"></div>
+  <script src="js/layout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
