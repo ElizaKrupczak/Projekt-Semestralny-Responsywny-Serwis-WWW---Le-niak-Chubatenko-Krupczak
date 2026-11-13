@@ -30,7 +30,7 @@
         <p class="hero-lead">Piszemy o rasach, psich zwyczajach i codziennej opiece. W naszym sklepie znajdziesz sprawdzone akcesoria dla swoich czworonogów.</p>
         <div class="d-flex flex-wrap gap-3 mt-4">
           <a class="btn btn-brand btn-lg px-4" href="sklep.html">Przejdź do sklepu <i aria-hidden="true" class="bi bi-cart3 ms-1"></i></a>
-          <a class="btn btn-outline-light btn-lg px-4" href="blog.html"><i aria-hidden="true" class="bi bi-journal-text me-1"></i> Czytaj naszego bloga</a>
+          <a class="btn btn-outline-light btn-lg px-4" href="blog.html">Czytaj naszego bloga</a>
         </div>
       </div>
     </div>
@@ -151,7 +151,7 @@
         <article class="card blog-card h-100">
           <a href="single.html?post=spacer"><img alt="Psy na spacerze" class="card-img-top" loading="lazy" src="assets/dog-1.jpg"/></a>
           <div class="card-body d-flex flex-column">
-            <div class="post-meta mb-2"><span class="badge category-badge">Wychowanie</span></div>
+            <div class="post-meta"><span class="badge category-badge">Wychowanie</span></div>
             <h3 class="card-title"><a href="single.html?post=spacer">Spokojny spacer: jak nauczyć psa luźnej smyczy?</a></h3>
             <a class="card-link-brand mt-auto" href="single.html?post=spacer">Czytaj dalej <i class="bi bi-arrow-right"></i></a>
           </div>
@@ -161,7 +161,7 @@
         <article class="card blog-card h-100">
           <a href="single.html?post=rasa"><img alt="Golden retriever" class="card-img-top" loading="lazy" src="assets/dog-2.jpg"/></a>
           <div class="card-body d-flex flex-column">
-            <div class="post-meta mb-2"><span class="badge category-badge">Rasy psów</span></div>
+            <div class="post-meta"><span class="badge category-badge">Rasy psów</span></div>
             <h3 class="card-title"><a href="single.html?post=rasa">Golden retriever – czy to pies dla Twojej rodziny?</a></h3>
             <a class="card-link-brand mt-auto" href="single.html?post=rasa">Czytaj dalej <i class="bi bi-arrow-right"></i></a>
           </div>
@@ -171,7 +171,7 @@
         <article class="card blog-card h-100">
           <a href="single.html?post=zabawa"><img alt="Pies na trawie" class="card-img-top" loading="lazy" src="assets/dog-3.jpg"/></a>
           <div class="card-body d-flex flex-column">
-            <div class="post-meta mb-2"><span class="badge category-badge">Aktywność</span></div>
+            <div class="post-meta"><span class="badge category-badge">Aktywność</span></div>
             <h3 class="card-title"><a href="single.html?post=zabawa">Zabawy węchowe na deszczowy dzień</a></h3>
             <a class="card-link-brand mt-auto" href="single.html?post=zabawa">Czytaj dalej <i class="bi bi-arrow-right"></i></a>
           </div>
@@ -193,24 +193,26 @@
         <h2 class="section-title">Porozmawiajmy o Twoim psie</h2>
         <p>Masz pytanie o rasę, zachowanie pupila albo produkt ze sklepu? Odpowiadamy w ciągu 24 godzin.</p>
         <ul class="contact-list list-unstyled mt-4">
-          <li><strong>E-mail:</strong> kontakt@reksieiazorki.pl</li>
-          <li><strong>Telefon:</strong> +48 500 123 456</li>
-          <li><strong>Adres:</strong> ul. Psia 12, Warszawa</li>
+          <li><i class="bi bi-envelope fs-5 text-primary"></i> <strong>E-mail:</strong> kontakt@reksieiazorki.pl</li>
+          <li><i class="bi bi-telephone fs-5 text-primary"></i> <strong>Telefon:</strong> +48 500 123 456</li>
+          <li><i class="bi bi-geo-alt fs-5 text-primary"></i> <strong>Adres:</strong> ul. Psia 12, Warszawa</li>
         </ul>
       </div>
       <div class="col-lg-7">
-        <form class="contact-form bg-white p-4 rounded shadow-sm border">
-          <div class="mb-3">
-            <label class="form-label">Imię i nazwisko</label>
-            <input type="text" class="form-control" required>
+        <form class="contact-form">
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label for="contactName" class="form-label">Imię i nazwisko</label>
+              <input type="text" id="contactName" class="form-control" placeholder="Jan Kowalski" required>
+            </div>
+            <div class="col-md-6">
+              <label for="contactEmail" class="form-label">E-mail</label>
+              <input type="email" id="contactEmail" class="form-control" placeholder="jan@przyklad.pl" required>
+            </div>
           </div>
-          <div class="mb-3">
-            <label class="form-label">E-mail</label>
-            <input type="email" class="form-control" required>
-          </div>
-          <div class="mb-3">
-            <label class="form-label">Wiadomość</label>
-            <textarea class="form-control" rows="5" required></textarea>
+          <div class="mb-4">
+            <label for="contactMessage" class="form-label">Wiadomość</label>
+            <textarea id="contactMessage" class="form-control" rows="5" placeholder="Napisz do nas, z czym możemy Ci pomóc..." required></textarea>
           </div>
           <button class="btn btn-brand btn-lg w-100" type="button">Wyślij wiadomość</button>
         </form>

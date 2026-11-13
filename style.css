@@ -63,7 +63,7 @@ a:hover { color: var(--ra-text); }
 .hero-tagline { display: block; color: var(--ra-secondary); font-size: clamp(1.4rem, 2.6vw, 2.1rem); margin-top: .75rem; }
 .hero-lead { font-size: 1.15rem; color: rgba(255, 255, 255, .9); max-width: 36rem; }
 
-/* ---------- Sekcje ---------- */
+/* ---------- Sekcje Główne ---------- */
 .section { padding: 100px 0; }
 .section-alt { background: var(--ra-accent); }
 .section-intro { max-width: 640px; margin-bottom: 3.5rem; }
@@ -83,11 +83,12 @@ a:hover { color: var(--ra-text); }
 .contact-list li { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.25rem; }
 .contact-list strong { display: block; }
 .contact-list a { text-decoration: none; }
-.contact-form { background: var(--ra-accent); padding: 2.5rem; border-radius: var(--ra-radius); box-shadow: var(--ra-shadow); }
-.form-label { font-weight: 600; }
-.form-control, .form-select { border-radius: .75rem; border: 2px solid transparent; padding: .75rem 1rem; color: var(--ra-text); }
-.form-control:focus, .form-select:focus { border-color: var(--ra-primary); box-shadow: 0 0 0 .2rem rgba(134, 189, 230, .35); }
+.contact-form { background: var(--ra-white); padding: 2.5rem; border-radius: var(--ra-radius); box-shadow: var(--ra-shadow); }
+.form-label { font-weight: 600; color: var(--ra-text); }
+.form-control, .form-select { border-radius: .75rem; border: 2px solid transparent; padding: .75rem 1rem; color: var(--ra-text); background-color: #f8f9fa; }
+.form-control:focus, .form-select:focus { border-color: var(--ra-primary); box-shadow: 0 0 0 .2rem rgba(134, 189, 230, .35); background-color: var(--ra-white); }
 .form-check-input:checked { background-color: var(--ra-primary-dark); border-color: var(--ra-primary-dark); }
+textarea.form-control { min-height: 120px; }
 
 /* Stopka */
 .site-footer { background: var(--ra-text); color: rgba(255, 255, 255, .8); padding: 60px 0 30px; }
@@ -97,11 +98,58 @@ a:hover { color: var(--ra-text); }
 .site-footer hr { border-color: rgba(255, 255, 255, .2); margin: 2rem 0 1.25rem; }
 .copyright { font-size: .9rem; text-align: center; }
 
-/* =========================================
-   MODUŁ E-COMMERCE (Ćwiczenie 5)
-   ========================================= */
 
-.page-padding-top { padding-top: 100px; }
+/* =========================================================
+   MODUŁ BLOGA (Odzyskane style z oryginalnego CSS)
+   ========================================================= */
+.page-header { padding: 150px 0 45px; background: var(--ra-accent); }
+.page-header h1 { font-size: 2.8rem; line-height: 1.2; }
+.page-header p { max-width: 42rem; margin-bottom: 0; }
+.blog-layout { padding-top: 60px; padding-bottom: 80px; }
+.blog-card { border: 0; border-radius: var(--ra-radius); overflow: hidden; box-shadow: var(--ra-shadow); transition: transform .3s; background: var(--ra-white); }
+.blog-card:hover { transform: translateY(-5px); }
+.blog-card .card-img-top { aspect-ratio: 3 / 2; width: 100%; height: auto; object-fit: cover; }
+.blog-card .card-body { padding: 1.6rem; }
+.blog-card .card-title { font-size: 1.5rem; line-height: 1.35; margin-bottom: 1rem; }
+.blog-card .card-title a { color: var(--ra-text); text-decoration: none; }
+.blog-card .card-title a:hover { color: var(--ra-primary-dark); }
+.post-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; font-size: .8rem; margin-bottom: 1rem; color: var(--ra-text-soft); }
+.category-badge { background: var(--ra-accent); color: var(--ra-text); font-family: var(--ra-font-body); font-weight: 600; padding: .3rem .6rem; border-radius: .5rem; }
+.card-link-brand { font-weight: 700; text-decoration: none; color: var(--ra-primary-dark); display: inline-flex; align-items: center; gap: 0.5rem;}
+.card-link-brand i { transition: transform 0.2s; }
+.card-link-brand:hover i { transform: translateX(5px); }
+
+/* Sidebar Bloga */
+.blog-sidebar section { padding-bottom: 1.8rem; margin-bottom: 1.8rem; border-bottom: 1px solid var(--ra-primary); }
+.blog-sidebar h2 { font-size: 1.6rem; margin-bottom: 1.2rem; }
+.category-link { display: flex; justify-content: space-between; align-items: center; padding: .7rem 0; text-decoration: none; color: var(--ra-text); transition: color 0.2s; }
+.category-link:hover { color: var(--ra-primary-dark); }
+.recommended-item { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.25rem; }
+.recommended-item img { width: 72px; height: 72px; object-fit: cover; border-radius: .5rem; }
+.recommended-item a { line-height: 1.3; color: var(--ra-text); text-decoration: none; font-weight: 600; transition: color 0.2s; }
+.recommended-item a:hover { color: var(--ra-primary-dark); }
+.pagination .page-link { color: var(--ra-text); border-color: var(--ra-primary); }
+.pagination .active .page-link { background: var(--ra-primary-dark); color: var(--ra-white); border-color: var(--ra-primary-dark); }
+
+/* Single Blog Post (pojedynczy wpis) */
+.article-layout { max-width: 920px; padding-top: 130px; padding-bottom: 80px; }
+.article-header { margin: 2rem 0; }
+.article-header h1 { font-size: 2.6rem; line-height: 1.25; overflow-wrap: anywhere; }
+.article-meta { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; font-size: .85rem; color: var(--ra-text-soft); }
+.article-image { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--ra-radius); }
+.article-body { margin: 2rem 0; font-size: 1.1rem; }
+.article-body h2 { font-size: 2rem; margin: 2.5rem 0 1rem; }
+.article-body p { margin-bottom: 1.5rem; }
+.blockquote { padding: 1.5rem; border-left: 4px solid var(--ra-primary-dark); background: var(--ra-accent); font-style: italic; border-radius: 0 1rem 1rem 0; margin: 2rem 0; }
+.author-box { display: flex; gap: 1.25rem; padding: 2rem; background: var(--ra-accent); border-radius: var(--ra-radius); align-items: center; margin-top: 3rem; }
+.author-box img { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; }
+.author-box h3 { font-size: 1.4rem; margin-bottom: 0.5rem; }
+
+
+/* =========================================
+   MODUŁ E-COMMERCE
+   ========================================= */
+.page-padding-top { padding-top: 130px; }
 
 /* Karta produktu w siatce */
 .product-card {
@@ -210,4 +258,8 @@ a:hover { color: var(--ra-text); }
   .checkout-summary { position: static; }
   .section { padding: 70px 0; }
   .hero { padding-top: 120px; min-height: auto; }
+  .page-header { padding-top: 120px; }
+  .article-layout { padding-top: 100px; }
+  .blog-layout { padding-top: 40px; padding-bottom: 50px; }
+  .author-box { flex-direction: column; text-align: center; }
 }
