@@ -360,3 +360,20 @@ textarea.form-control { min-height: 120px; }
   background-color: var(--ra-white);
   border-color: #dee2e6;
 }
+/* Dodatkowe dopasowanie na małe smartfony */
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 575.98px) {
+  .brand {
+    font-size: 1.25rem;
+    gap: 0.35rem;
+  }
+  .site-nav .gap-3 {
+    gap: 0.65rem !important;
+  }
+  .about-media::before {
+    inset: 12px -8px -12px 12px;
+  }
+}
