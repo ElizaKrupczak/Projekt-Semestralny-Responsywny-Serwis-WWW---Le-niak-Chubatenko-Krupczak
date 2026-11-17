@@ -426,3 +426,24 @@ body {
     inset: 12px -8px -12px 12px;
   }
 }
+/* Dopasowanie nagłówków i odstępów na najmniejsze ekrany (320–575 px) */
+@media (max-width: 575.98px) {
+  .section {
+    padding: 56px 0;
+  }
+  .hero-title {
+    font-size: 2.15rem;
+  }
+  .hero-tagline {
+    font-size: 1.25rem;
+  }
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  .article-header h1 {
+    font-size: 1.85rem;
+  }
+  .recommended-item img {
+    flex-shrink: 0;
+  }
+}
