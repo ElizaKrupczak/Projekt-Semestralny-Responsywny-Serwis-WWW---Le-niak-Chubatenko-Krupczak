@@ -1,88 +1,206 @@
-(function () {
-  var header = `
-<header>
-  <nav aria-label="Nawigacja główna" class="navbar navbar-expand-lg fixed-top site-nav" id="mainNav">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog i porady dla opiekunów psów | Reksie i Azorki</title>
+  <meta name="description" content="Artykuły o wychowaniu, żywieniu, zdrowiu i rasach psów. Baza wiedzy Reksie i Azorki.">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DynaPuff:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <!-- Nagłówek podstrony -->
+  <section class="page-header">
     <div class="container">
-      <a class="navbar-brand brand" href="index.html#hero">
-        <i aria-hidden="true" class="bi bi-heart-pulse-fill brand-icon"></i>
-        Reksie <span class="brand-amp">i</span> Azorki
-      </a>
-      <div class="d-flex align-items-center order-lg-3 ms-auto gap-3">
-        <a href="konto.html" class="text-reset nav-icon-link" aria-label="Konto użytkownika" title="Moje konto">
-          <i class="bi bi-person-circle fs-4"></i>
-        </a>
-        <a href="koszyk.html" class="text-reset position-relative me-2 me-lg-0 nav-icon-link" aria-label="Koszyk zakupowy" title="Koszyk">
-          <i class="bi bi-cart3 fs-4"></i>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">2<span class="visually-hidden">produkty w koszyku</span></span>
-        </a>
-        <button aria-controls="navMenu" aria-expanded="false" aria-label="Pokaż lub ukryj menu" class="navbar-toggler ms-2" data-bs-target="#navMenu" data-bs-toggle="collapse" type="button">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse order-lg-2" id="navMenu">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 pe-lg-4">
-          <li class="nav-item"><a class="nav-link" href="index.html#o-nas">O nas</a></li>
-          <li class="nav-item"><a class="nav-link" href="sklep.html">Sklep</a></li>
-          <li class="nav-item"><a class="nav-link nav-link--blog" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#kontakt">Kontakt</a></li>
-        </ul>
-      </div>
+      <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="index.html">Strona główna</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Blog</li>
+        </ol>
+      </nav>
+      <h1>Blog i baza wiedzy</h1>
+      <p class="lead text-muted mt-2">Praktyczne poradniki o wychowaniu, zdrowiu, żywieniu i wspólnych aktywnościach z psem – przygotowane we współpracy z behawiorystami i lekarzami weterynarii.</p>
     </div>
-  </nav>
-</header>`;
+  </section>
 
-  var footer = `
-<footer class="site-footer">
-  <div class="container">
-    <div class="row g-4 align-items-start">
-      <div class="col-md-6">
-        <a class="brand brand--footer" href="index.html#hero">Reksie <span class="brand-amp">i</span> Azorki</a>
-        <p class="mt-2 mb-0">Reksie i Azorki sp. z o.o.<br>ul. Psia 12, 00-001 Warszawa<br>NIP: 123-456-78-90 • REGON: 123456789</p>
-      </div>
-      <div class="col-md-6 text-md-end">
-        <nav aria-label="Nawigacja w stopce">
-          <a href="index.html#o-nas">O nas</a> · <a href="sklep.html">Sklep</a> · <a href="index.html#kontakt">Kontakt</a> · <a href="blog.html">Blog</a>
+  <!-- Główny układ dwukolumnowy -->
+  <div class="container blog-layout">
+    <div class="row g-5">
+      <!-- Kolumna treści głównej -->
+      <main class="col-lg-8">
+        <div class="row g-4">
+          <!-- Wpis 1 -->
+          <div class="col-md-6">
+            <article class="card blog-card h-100">
+              <a href="single.html"><img src="assets/dog-1.jpg" class="card-img-top" alt="Pies na spacerze na luźnej smyczy" loading="lazy"></a>
+              <div class="card-body d-flex flex-column">
+                <div class="post-meta">
+                  <span class="badge category-badge">Wychowanie</span>
+                  <span><i class="bi bi-calendar3 me-1"></i>10.11.2026</span>
+                </div>
+                <h3 class="card-title"><a href="single.html">Spokojny spacer: jak nauczyć psa luźnej smyczy?</a></h3>
+                <p class="card-text text-muted mb-4">Ciągnięcie na smyczy to jeden z najczęstszych problemów podczas codziennych wyjść. Poznaj sprawdzone techniki budowania uwagi i spokoju w mieście.</p>
+                <a href="single.html" class="card-link-brand mt-auto">Czytaj dalej <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Wpis 2 -->
+          <div class="col-md-6">
+            <article class="card blog-card h-100">
+              <a href="single.html"><img src="assets/dog-2.jpg" class="card-img-top" alt="Golden retriever na łące" loading="lazy"></a>
+              <div class="card-body d-flex flex-column">
+                <div class="post-meta">
+                  <span class="badge category-badge">Rasy psów</span>
+                  <span><i class="bi bi-calendar3 me-1"></i>04.11.2026</span>
+                </div>
+                <h3 class="card-title"><a href="single.html">Golden retriever – czy to pies dla Twojej rodziny?</a></h3>
+                <p class="card-text text-muted mb-4">Łagodny, cierpliwy i zawsze chętny do zabawy. Sprawdzamy, jakich warunków potrzebuje golden retriever oraz na co zwrócić uwagę przy wyborze hodowli.</p>
+                <a href="single.html" class="card-link-brand mt-auto">Czytaj dalej <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Wpis 3 -->
+          <div class="col-md-6">
+            <article class="card blog-card h-100">
+              <a href="single.html"><img src="assets/dog-3.jpg" class="card-img-top" alt="Pies podczas zabawy węchowej" loading="lazy"></a>
+              <div class="card-body d-flex flex-column">
+                <div class="post-meta">
+                  <span class="badge category-badge">Aktywność</span>
+                  <span><i class="bi bi-calendar3 me-1"></i>28.10.2026</span>
+                </div>
+                <h3 class="card-title"><a href="single.html">Zabawy węchowe na deszczowy dzień</a></h3>
+                <p class="card-text text-muted mb-4">Praca nosem wycisza i daje psu ogromną satysfakcję. Podpowiadamy, jak korzystać z mat węchowych i prostych domowych łamigłówek.</p>
+                <a href="single.html" class="card-link-brand mt-auto">Czytaj dalej <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Wpis 4 -->
+          <div class="col-md-6">
+            <article class="card blog-card h-100">
+              <a href="single.html"><img src="assets/dog-4.jpg" class="card-img-top" alt="Dobór szelek dla psa" loading="lazy"></a>
+              <div class="card-body d-flex flex-column">
+                <div class="post-meta">
+                  <span class="badge category-badge">Akcesoria</span>
+                  <span><i class="bi bi-calendar3 me-1"></i>19.10.2026</span>
+                </div>
+                <h3 class="card-title"><a href="single.html">Szelki typu guard czy norweskie? Porównanie</a></h3>
+                <p class="card-text text-muted mb-4">Źle dobrane szelki mogą ograniczać ruch łopatek i obciążać kręgosłup. Zobacz, jak prawidłowo zmierzyć psa i wybrać bezpieczny krój.</p>
+                <a href="single.html" class="card-link-brand mt-auto">Czytaj dalej <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Wpis 5 -->
+          <div class="col-md-6">
+            <article class="card blog-card h-100">
+              <a href="single.html"><img src="assets/dog-5.jpg" class="card-img-top" alt="Opiekunka z psem" loading="lazy"></a>
+              <div class="card-body d-flex flex-column">
+                <div class="post-meta">
+                  <span class="badge category-badge">Zdrowie</span>
+                  <span><i class="bi bi-calendar3 me-1"></i>11.10.2026</span>
+                </div>
+                <h3 class="card-title"><a href="single.html">Jesienna odporność psa – o czym warto pamiętać?</a></h3>
+                <p class="card-text text-muted mb-4">Chłodniejsze poranki i wilgoć wymagają odpowiedniego wsparcia organizmu pupila. Omawiamy suplementację, pielęgnację łap i profilaktykę.</p>
+                <a href="single.html" class="card-link-brand mt-auto">Czytaj dalej <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Wpis 6 -->
+          <div class="col-md-6">
+            <article class="card blog-card h-100">
+              <a href="single.html"><img src="assets/dog-6.jpg" class="card-img-top" alt="Odpoczynek psa w domu" loading="lazy"></a>
+              <div class="card-body d-flex flex-column">
+                <div class="post-meta">
+                  <span class="badge category-badge">Żywienie</span>
+                  <span><i class="bi bi-calendar3 me-1"></i>02.10.2026</span>
+                </div>
+                <h3 class="card-title"><a href="single.html">Miska spowalniająca jedzenie – kiedy ma sens?</a></h3>
+                <p class="card-text text-muted mb-4">Zbyt łapczywe połykanie posiłków sprzyja problemom trawiennym. Wyjaśniamy, jak dobrać miskę spowalniającą lub matę do lizania.</p>
+                <a href="single.html" class="card-link-brand mt-auto">Czytaj dalej <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Paginacja -->
+        <nav aria-label="Paginacja wpisów na blogu" class="mt-5 pt-3">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><a class="page-link" href="blog.html" tabindex="-1">Poprzednia</a></li>
+            <li class="page-item active"><a class="page-link" href="blog.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="blog.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="blog.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="blog.html">Następna</a></li>
+          </ul>
         </nav>
-        <a class="back-top mt-3" href="index.html#hero"><i aria-hidden="true" class="bi bi-arrow-up"></i> Do góry</a>
-      </div>
+      </main>
+
+      <!-- Pasek boczny -->
+      <aside class="col-lg-4 blog-sidebar">
+        <!-- Wyszukiwarka -->
+        <section>
+          <h2>Szukaj na blogu</h2>
+          <form role="search" action="blog.html">
+            <div class="input-group">
+              <input type="search" class="form-control" placeholder="Wpisz frazę, np. smycz..." aria-label="Szukaj artykułów">
+              <button class="btn btn-brand px-3" type="submit" aria-label="Szukaj">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Kategorie -->
+        <section>
+          <h2>Kategorie</h2>
+          <ul class="list-unstyled mb-0">
+            <li><a href="blog.html" class="category-link"><span>Wychowanie</span><span class="badge rounded-pill bg-secondary">5</span></a></li>
+            <li><a href="blog.html" class="category-link"><span>Rasy psów</span><span class="badge rounded-pill bg-secondary">4</span></a></li>
+            <li><a href="blog.html" class="category-link"><span>Aktywność</span><span class="badge rounded-pill bg-secondary">6</span></a></li>
+            <li><a href="blog.html" class="category-link"><span>Zdrowie</span><span class="badge rounded-pill bg-secondary">3</span></a></li>
+            <li><a href="blog.html" class="category-link"><span>Żywienie</span><span class="badge rounded-pill bg-secondary">4</span></a></li>
+            <li><a href="blog.html" class="category-link"><span>Akcesoria</span><span class="badge rounded-pill bg-secondary">2</span></a></li>
+          </ul>
+        </section>
+
+        <!-- Polecane artykuły -->
+        <section class="border-bottom-0 pb-0 mb-0">
+          <h2>Polecane artykuły</h2>
+          <div class="recommended-item">
+            <img src="assets/dog-1.jpg" alt="Spokojny spacer" loading="lazy">
+            <div>
+              <a href="single.html">Spokojny spacer: jak nauczyć psa luźnej smyczy?</a>
+              <div class="small text-muted mt-1">10.11.2026</div>
+            </div>
+          </div>
+          <div class="recommended-item">
+            <img src="assets/dog-2.jpg" alt="Golden retriever" loading="lazy">
+            <div>
+              <a href="single.html">Golden retriever – czy to pies dla Twojej rodziny?</a>
+              <div class="small text-muted mt-1">04.11.2026</div>
+            </div>
+          </div>
+          <div class="recommended-item mb-0">
+            <img src="assets/dog-3.jpg" alt="Zabawy węchowe" loading="lazy">
+            <div>
+              <a href="single.html">Zabawy węchowe na deszczowy dzień</a>
+              <div class="small text-muted mt-1">28.10.2026</div>
+            </div>
+          </div>
+        </section>
+      </aside>
     </div>
-    <hr>
-    <p class="copyright mb-0">© <span id="year">${new Date().getFullYear()}</span> Reksie i Azorki. Wszelkie prawa zastrzeżone.</p>
   </div>
-</footer>`;
 
-  function render() {
-    var h = document.getElementById("site-header");
-    var f = document.getElementById("site-footer");
-    if (h) h.outerHTML = header;
-    if (f) f.outerHTML = footer;
-
-    var page = location.pathname.split("/").pop() || "index.html";
-    
-    if (page === "blog.html" || page === "single.html") {
-      var blog = document.querySelector('#mainNav a[href="blog.html"]');
-      if (blog) { blog.classList.add("active"); blog.setAttribute("aria-current", "page"); }
-    } else if (page.includes("sklep") || page === "produkt.html" || page === "koszyk.html" || page === "zamowienie.html") {
-      var sklep = document.querySelector('#mainNav a[href="sklep.html"]');
-      if (sklep) { sklep.classList.add("active"); sklep.setAttribute("aria-current", "page"); }
-    }
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", render);
-  } else {
-    render();
-  }
-
-  setTimeout(() => {
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-    const nav = document.getElementById('mainNav');
-    if(nav) {
-      const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
-      window.addEventListener('scroll', onScroll);
-      onScroll();
-    }
-  }, 100);
-})();
+  <div id="site-footer"></div>
+  <script src="js/layout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

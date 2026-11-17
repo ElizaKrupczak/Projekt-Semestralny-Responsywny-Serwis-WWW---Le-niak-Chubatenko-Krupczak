@@ -13,7 +13,7 @@
         </a>
         <a href="koszyk.html" class="text-reset position-relative me-2 me-lg-0 nav-icon-link" aria-label="Koszyk zakupowy" title="Koszyk">
           <i class="bi bi-cart3 fs-4"></i>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">2<span class="visually-hidden">produkty w koszyku</span></span>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-badge">2<span class="visually-hidden">produkty w koszyku</span></span>
         </a>
         <button aria-controls="navMenu" aria-expanded="false" aria-label="Pokaż lub ukryj menu" class="navbar-toggler ms-2" data-bs-target="#navMenu" data-bs-toggle="collapse" type="button">
           <span class="navbar-toggler-icon"></span>
@@ -23,7 +23,7 @@
         <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 pe-lg-4">
           <li class="nav-item"><a class="nav-link" href="index.html#o-nas">O nas</a></li>
           <li class="nav-item"><a class="nav-link" href="sklep.html">Sklep</a></li>
-          <li class="nav-item"><a class="nav-link nav-link--blog" href="blog.html"><i aria-hidden="true" class="bi bi-journal-text me-1"></i>Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#kontakt">Kontakt</a></li>
         </ul>
       </div>
@@ -58,8 +58,7 @@
     if (f) f.outerHTML = footer;
 
     var page = location.pathname.split("/").pop() || "index.html";
-    
-    // Aktywacja zakładek w nawigacji
+
     if (page === "blog.html" || page === "single.html") {
       var blog = document.querySelector('#mainNav a[href="blog.html"]');
       if (blog) { blog.classList.add("active"); blog.setAttribute("aria-current", "page"); }
@@ -80,7 +79,7 @@
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
     const nav = document.getElementById('mainNav');
-    if(nav) {
+    if (nav) {
       const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
       window.addEventListener('scroll', onScroll);
       onScroll();

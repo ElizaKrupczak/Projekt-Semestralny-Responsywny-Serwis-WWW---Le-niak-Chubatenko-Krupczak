@@ -1,88 +1,187 @@
-(function () {
-  var header = `
-<header>
-  <nav aria-label="Nawigacja główna" class="navbar navbar-expand-lg fixed-top site-nav" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand brand" href="index.html#hero">
-        <i aria-hidden="true" class="bi bi-heart-pulse-fill brand-icon"></i>
-        Reksie <span class="brand-amp">i</span> Azorki
-      </a>
-      <div class="d-flex align-items-center order-lg-3 ms-auto gap-3">
-        <a href="konto.html" class="text-reset nav-icon-link" aria-label="Konto użytkownika" title="Moje konto">
-          <i class="bi bi-person-circle fs-4"></i>
-        </a>
-        <a href="koszyk.html" class="text-reset position-relative me-2 me-lg-0 nav-icon-link" aria-label="Koszyk zakupowy" title="Koszyk">
-          <i class="bi bi-cart3 fs-4"></i>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.65rem;">2<span class="visually-hidden">produkty w koszyku</span></span>
-        </a>
-        <button aria-controls="navMenu" aria-expanded="false" aria-label="Pokaż lub ukryj menu" class="navbar-toggler ms-2" data-bs-target="#navMenu" data-bs-toggle="collapse" type="button">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse order-lg-2" id="navMenu">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2 pe-lg-4">
-          <li class="nav-item"><a class="nav-link" href="index.html#o-nas">O nas</a></li>
-          <li class="nav-item"><a class="nav-link" href="sklep.html">Sklep</a></li>
-          <li class="nav-item"><a class="nav-link nav-link--blog" href="blog.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#kontakt">Kontakt</a></li>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spokojny spacer: jak nauczyć psa luźnej smyczy? | Reksie i Azorki</title>
+  <meta name="description" content="Praktyczny poradnik nauki chodzenia na luźnej smyczy krok po kroku.">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DynaPuff:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container article-layout">
+    <!-- Nawigacja okruszkowa -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Strona główna</a></li>
+        <li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Spokojny spacer: jak nauczyć psa luźnej smyczy?</li>
+      </ol>
+    </nav>
+
+    <!-- Struktura artykułu -->
+    <article>
+      <header class="article-header">
+        <span class="badge category-badge mb-3">Wychowanie</span>
+        <h1>Spokojny spacer: jak nauczyć psa luźnej smyczy?</h1>
+        <div class="article-meta mt-3">
+          <span><i class="bi bi-calendar3 me-1"></i>10 listopada 2026</span>
+          <span><i class="bi bi-person me-1"></i>Karolina Nowak (behawiorystka)</span>
+          <span><i class="bi bi-clock me-1"></i>Czas czytania: 5 min</span>
+          <span><i class="bi bi-folder2 me-1"></i>Wychowanie</span>
+        </div>
+      </header>
+
+      <img src="assets/dog-1.jpg" class="article-image shadow-sm" alt="Pies idący spokojnie przy opiekunie na luźnej smyczy">
+
+      <div class="article-body">
+        <p class="lead">Ciągnięcie na smyczy to jedno z najczęstszych wyzwań, z jakimi zgłaszają się do nas opiekunowie psów. Dobra wiadomość jest taka, że spokojny spacer bez napiętej linki nie wymaga szarpania ani awersji – kluczem jest konsekwencja i odpowiednie wyposażenie.</p>
+
+        <h2>Dlaczego psy ciągną na smyczy?</h2>
+        <p>Naturalne tempo chodu człowieka jest znacznie wolniejsze niż trucht psa, a otoczenie pełne zapachów działa jak fascynująca gazeta, którą pupil chce przeczytać jak najszybciej. Jeśli pies odkryje, że napięcie smyczy pozwala mu dotrzeć do drzewa lub innego czworonoga, zachowanie to utrwala się błyskawicznie.</p>
+
+        <blockquote class="blockquote">
+          <p class="mb-2">„Luźna smycz nie jest efektem zakazów, lecz relacji – pies wybiera kontakt z opiekunem wtedy, gdy obecność człowieka kojarzy mu się z bezpieczeństwem i współpracą.”</p>
+          <footer class="blockquote-footer mt-1">Karolina Nowak, <cite title="Reksie i Azorki">Zespół Reksie i Azorki</cite></footer>
+        </blockquote>
+
+        <h2>Trzy kroki do spokojnego spaceru</h2>
+        <p>Zanim wyjdziesz na ruchliwą ulicę, przećwicz podstawy w spokojnym miejscu, gdzie liczba rozproszeń jest niewielka:</p>
+        <ul>
+          <li><strong>Zatrzymuj się, gdy smycz się napina:</strong> pies uczy się, że napięta linka wstrzymuje marsz, a poluzowanie oznacza dalszą drogę.</li>
+          <li><strong>Nagradzaj kontakt wzrokowy:</strong> każde spojrzenie psa w Twoją stronę podczas ruchu nagradzaj pochwałą i smakołykiem podawanym przy nodze.</li>
+          <li><strong>Zadbaj o odpowiednią długość smyczy:</strong> smycz miejska 1,5 m sprawdzi się przy przejściu przez jezdnię, ale na spacerze w parku lepiej wybrać smycz przepinaną 3 m.</li>
         </ul>
+
+        <h3>Dobór sprzętu a komfort psa</h3>
+        <p>Podczas nauki chodzenia na luźnej smyczy ogromne znaczenie ma rozkład nacisku na ciało psa. Poniższe zestawienie pomoże dopasować akcesoria do etapu treningu:</p>
+
+        <div class="table-responsive my-4">
+          <table class="table table-bordered align-middle">
+            <thead class="table-light">
+              <tr>
+                <th>Rodzaj akcesorium</th>
+                <th>Zalecana długość / krój</th>
+                <th>Zastosowanie</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Szelki Guard Pro</strong></td>
+                <td>Pełna regulacja w 4 punktach</td>
+                <td>Codzienne spacery i nauka luźnej smyczy bez ucisku tchawicy</td>
+              </tr>
+              <tr>
+                <td><strong>Smycz przepinana</strong></td>
+                <td>2,5 m – 3,0 m</td>
+                <td>Swobodna eksploracja w parku i trening przywołania</td>
+              </tr>
+              <tr>
+                <td><strong>Smycz miejska</strong></td>
+                <td>1,5 m</td>
+                <td>Krótkie przejścia chodnikiem i komunikacja miejska</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="my-4">
+          <img src="assets/dog-3.jpg" class="article-image shadow-sm" alt="Pies w ergonomicznych szelkach typu guard">
+          <figcaption class="figure-caption text-center mt-2">Ergonomiczne szelki typu guard nie blokują pracy łopatek i zwiększają komfort psa podczas nauki chodzenia przy nodze.</figcaption>
+        </figure>
       </div>
-    </div>
-  </nav>
-</header>`;
 
-  var footer = `
-<footer class="site-footer">
-  <div class="container">
-    <div class="row g-4 align-items-start">
-      <div class="col-md-6">
-        <a class="brand brand--footer" href="index.html#hero">Reksie <span class="brand-amp">i</span> Azorki</a>
-        <p class="mt-2 mb-0">Reksie i Azorki sp. z o.o.<br>ul. Psia 12, 00-001 Warszawa<br>NIP: 123-456-78-90 • REGON: 123456789</p>
+      <!-- Stopka artykułu: tagi, udostępnianie, autor -->
+      <footer class="border-top pt-4 mt-5">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
+          <div class="d-flex flex-wrap align-items-center gap-2">
+            <span class="fw-bold small me-1">Tagi:</span>
+            <a href="blog.html" class="badge category-badge text-decoration-none">#luźnasmycz</a>
+            <a href="blog.html" class="badge category-badge text-decoration-none">#wychowanie</a>
+            <a href="blog.html" class="badge category-badge text-decoration-none">#spacer</a>
+            <a href="blog.html" class="badge category-badge text-decoration-none">#szelki</a>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="fw-bold small me-1">Udostępnij:</span>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" class="btn btn-sm btn-outline-dark rounded-circle share-btn" aria-label="Udostępnij na Facebooku"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" class="btn btn-sm btn-outline-dark rounded-circle share-btn" aria-label="Udostępnij na Instagramie"><i class="bi bi-instagram"></i></a>
+            <a href="mailto:?subject=Polecam%20artyku%C5%82%20Reksie%20i%20Azorki" class="btn btn-sm btn-outline-dark rounded-circle share-btn" aria-label="Wyślij e-mailem"><i class="bi bi-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Biogram autora -->
+        <div class="author-box">
+          <img src="assets/dog-5.jpg" alt="Karolina Nowak – autorka artykułu">
+          <div>
+            <span class="small text-uppercase fw-bold text-muted">O autorze</span>
+            <h3>Karolina Nowak</h3>
+            <p class="mb-0 text-muted">Certyfikowana behawiorystka psów i opiekunka dwóch adoptowanych kundelków – Reksia i Azorka. Na co dzień pomaga rodzinom budować spokojną komunikację z psami bez użycia przymusu.</p>
+          </div>
+        </div>
+      </footer>
+    </article>
+
+    <!-- Nawigacja relacyjna (poprzedni / następny artykuł) -->
+    <nav aria-label="Nawigacja między artykułami" class="d-flex flex-column flex-sm-row justify-content-between gap-3 my-5 py-4 border-top border-bottom">
+      <a href="single.html" class="text-decoration-none">
+        <span class="small text-muted d-block"><i class="bi bi-arrow-left me-1"></i>Poprzedni artykuł</span>
+        <strong class="text-dark">Zabawy węchowe na deszczowy dzień</strong>
+      </a>
+      <a href="single.html" class="text-decoration-none text-sm-end">
+        <span class="small text-muted d-block">Następny artykuł<i class="bi bi-arrow-right ms-1"></i></span>
+        <strong class="text-dark">Golden retriever – czy to pies dla Twojej rodziny?</strong>
+      </a>
+    </nav>
+
+    <!-- Statyczna sekcja komentarzy -->
+    <section aria-labelledby="comments-heading" class="mt-4">
+      <h2 id="comments-heading" class="h4 mb-4">Komentarze (2)</h2>
+
+      <div class="comment-card p-4 mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <strong>Marek Zieliński</strong>
+          <small class="text-muted">12.11.2026, 14:20</small>
+        </div>
+        <p class="mb-0 text-muted">Metoda zatrzymywania się przy napiętej smyczy zadziałała u naszego rocznego labradora już po tygodniu konsekwentnych spacerów. Świetny artykuł!</p>
       </div>
-      <div class="col-md-6 text-md-end">
-        <nav aria-label="Nawigacja w stopce">
-          <a href="index.html#o-nas">O nas</a> · <a href="sklep.html">Sklep</a> · <a href="index.html#kontakt">Kontakt</a> · <a href="blog.html">Blog</a>
-        </nav>
-        <a class="back-top mt-3" href="index.html#hero"><i aria-hidden="true" class="bi bi-arrow-up"></i> Do góry</a>
+
+      <div class="comment-card p-4 mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <strong>Magdalena Krawczyk</strong>
+          <small class="text-muted">14.11.2026, 09:45</small>
+        </div>
+        <p class="mb-0 text-muted">Potwierdzam, zmiana ze zwykłej obroży na szelki guard i smycz 3-metrową zrobiła ogromną różnicę na plus.</p>
       </div>
-    </div>
-    <hr>
-    <p class="copyright mb-0">© <span id="year">${new Date().getFullYear()}</span> Reksie i Azorki. Wszelkie prawa zastrzeżone.</p>
-  </div>
-</footer>`;
 
-  function render() {
-    var h = document.getElementById("site-header");
-    var f = document.getElementById("site-footer");
-    if (h) h.outerHTML = header;
-    if (f) f.outerHTML = footer;
+      <div class="contact-form">
+        <h3 class="h5 mb-3">Dodaj komentarz</h3>
+        <form>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label for="commentAuthor" class="form-label">Imię</label>
+              <input type="text" id="commentAuthor" class="form-control" placeholder="Twoje imię" required>
+            </div>
+            <div class="col-md-6">
+              <label for="commentEmail" class="form-label">E-mail (nie będzie publikowany)</label>
+              <input type="email" id="commentEmail" class="form-control" placeholder="twoj@email.pl" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="commentBody" class="form-label">Treść komentarza</label>
+            <textarea id="commentBody" class="form-control" rows="4" placeholder="Podziel się swoimi doświadczeniami..." required></textarea>
+          </div>
+          <button type="button" class="btn btn-brand px-4">Opublikuj komentarz</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
-    var page = location.pathname.split("/").pop() || "index.html";
-    
-    if (page === "blog.html" || page === "single.html") {
-      var blog = document.querySelector('#mainNav a[href="blog.html"]');
-      if (blog) { blog.classList.add("active"); blog.setAttribute("aria-current", "page"); }
-    } else if (page.includes("sklep") || page === "produkt.html" || page === "koszyk.html" || page === "zamowienie.html") {
-      var sklep = document.querySelector('#mainNav a[href="sklep.html"]');
-      if (sklep) { sklep.classList.add("active"); sklep.setAttribute("aria-current", "page"); }
-    }
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", render);
-  } else {
-    render();
-  }
-
-  setTimeout(() => {
-    const yearEl = document.getElementById('year');
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-    const nav = document.getElementById('mainNav');
-    if(nav) {
-      const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
-      window.addEventListener('scroll', onScroll);
-      onScroll();
-    }
-  }, 100);
-})();
+  <div id="site-footer"></div>
+  <script src="js/layout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
