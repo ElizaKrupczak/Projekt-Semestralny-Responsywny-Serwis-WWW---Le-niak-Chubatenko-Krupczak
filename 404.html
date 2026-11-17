@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 – Nie znaleziono strony | Reksie i Azorki</title>
+  <meta name="description" content="Nie odnaleziono szukanej podstrony w serwisie Reksie i Azorki.">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=DynaPuff:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="error-404-section d-flex flex-column align-items-center justify-content-center text-center px-3" style="background: radial-gradient(circle at top, rgba(255, 248, 217, 0.95), rgba(255, 255, 255, 1));">
+    <div class="error-404-code" aria-hidden="true">404</div>
+    <h1 class="mb-3">Nie znaleziono strony</h1>
+    <p class="lead text-muted max-w-540 mb-4">
+      Wygląda na to, że szukana strona została przeniesiona lub adres URL został wpisany niepoprawnie. Skorzystaj z wyszukiwarki poniżej albo przejdź do jednej z głównych sekcji naszego serwisu.
+    </p>
+
+    <!-- Wyszukiwarka serwisu -->
+    <form action="sklep.html" role="search" class="w-100 error-404-search mb-4">
+      <div class="input-group input-group-lg shadow-sm">
+        <input type="search" class="form-control" placeholder="Szukaj produktów lub porad na blogu..." aria-label="Szukaj w serwisie">
+        <button class="btn btn-brand px-4" type="submit" aria-label="Szukaj">
+          <i class="bi bi-search"></i>
+        </button>
+      </div>
+    </form>
+
+    <!-- Przyciski ratunkowe -->
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <a href="index.html" class="btn btn-brand btn-lg px-4">
+        <i class="bi bi-house-door me-2"></i>Wróć do strony głównej
+      </a>
+      <a href="sklep.html" class="btn btn-outline-dark btn-lg px-4">
+        <i class="bi bi-bag me-2"></i>Przejdź do sklepu
+      </a>
+      <a href="kontakt.html" class="btn btn-outline-secondary btn-lg px-4">
+        <i class="bi bi-envelope me-2"></i>Skontaktuj się z nami
+      </a>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/layout.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

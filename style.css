@@ -271,3 +271,88 @@ textarea.form-control { min-height: 120px; }
 .shop-filters-sticky { top: 100px; z-index: 1; }
 .share-btn { width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; padding: 0; }
 .comment-card { background: var(--ra-accent); border-radius: var(--ra-radius); }
+/* STRONY POMOCNICZE I STOPKA */
+.footer-heading {
+  font-size: 1.15rem;
+  color: var(--ra-secondary);
+  margin-bottom: 1rem;
+}
+.footer-desc {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.95rem;
+}
+.footer-links li {
+  margin-bottom: 0.45rem;
+}
+.footer-links a,
+.footer-contact a {
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s ease, padding-left 0.2s ease;
+}
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: var(--ra-secondary);
+}
+.footer-social a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--ra-accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.footer-social a:hover {
+  background: var(--ra-secondary);
+  color: var(--ra-text);
+}
+.sub-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Podstrona kontaktowa */
+.contact-details-card {
+  background: var(--ra-accent);
+  border-radius: var(--ra-radius);
+}
+.map-frame {
+  border: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Podstrona polityki prywatności */
+.legal-article h2 {
+  font-size: 1.65rem;
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+}
+.legal-article p,
+.legal-article li {
+  margin-bottom: 0.85rem;
+}
+
+/* Strona błędu 404 */
+.error-404-section {
+  min-height: calc(100vh - 120px);
+  padding: 140px 0 80px;
+}
+.error-404-code {
+  font-family: var(--ra-font-head);
+  font-size: clamp(5.5rem, 16vw, 9.5rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ra-primary-dark);
+  text-shadow: 4px 4px 0 var(--ra-secondary);
+  margin-bottom: 0.75rem;
+}
+.max-w-540 {
+  max-width: 540px;
+}
+.error-404-search {
+  max-width: 480px;
+}
