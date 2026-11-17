@@ -356,3 +356,7 @@ textarea.form-control { min-height: 120px; }
 .error-404-search {
   max-width: 480px;
 }
+#fakturaFields .form-control {
+  background-color: var(--ra-white);
+  border-color: #dee2e6;
+}
